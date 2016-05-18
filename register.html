@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>猎聘网 - 中高端人才求职、找工作，首选招聘平台！</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            border: none;
+        }
+        ul, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, p, blockquote, th, table, tr, td, ins, hr {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        a{
+            text-decoration: none;
+        }
+        input{
+            border: none;
+            padding: 0;
+            margin: 0;
+        }
+        .header{
+            width: 100%;
+            height: 50px;
+            background: #333;
+        }
+        .box{
+            width: 980px;
+            margin: 0 auto;
+            background: #333;
+            font-size: 12px;
+        }
+        .box .header_left_logo{
+            float: left;
+            padding: 5px 5px 20px 0;
+            width: 140px;
+            height: 40px;
+            cursor: pointer;
+        }
+        .box .header_right{
+            position: relative;
+            height: 50px;
+            float: right;
+            color: #999;
+        }
+        .box .header_right span{
+            display: inline-block;
+            margin-top: 17px;
+            padding-left:10px;
+            position: absolute;
+            height: 16px;
+            width: 1px;
+            border-left: 1px #999999 dotted;
+        }
+        .box .header_right a{
+            float: left;
+            margin: 0 10px;
+            height: 50px;
+            line-height: 50px;
+        }
+        .background{
+            background: url("img/bj.jpg")no-repeat center;
+        }
+        .container{
+            width: 980px;
+            height: 669px;
+            margin: auto;
+            /*background: red;*/
+        }
+        .side{
+            position: absolute;
+            float: left;
+            width: 598px;
+            height: 470px;
+            margin-top: 67px;
+            /*background: yellow;*/
+        }
+        .search_box{
+            position: relative;
+            display: block;
+            float: left;
+            width: 456px;
+            height: 32px;
+            padding: 7px 138px 5px 0;
+            border: 2px solid #ff9500;
+            background-color: white;
+            margin-bottom: 30px;
+        }
+        .input_main{
+            float: left;
+            width: 100%;
+            height: 28px;
+            padding: 1px 0;
+            font-size: 16px;
+            color: #666;
+        }
+        .input_main input{
+            width: 300px;
+            height: 35px;
+            margin-left: 20px;
+            outline: none;
+        }
+        .search_btn{
+            position: absolute;
+            top:0;
+            right: 0;
+            padding: 0 12px;
+            width: 114px;
+            height: 46px;
+            line-height: 46px;
+            background-color:#ff9500 ;
+            display: inline-block;
+            text-align: center;
+
+
+        }
+        .search_btn button{
+            font-size: 16px;
+            font-family:"Microsoft YaHei";
+            color: white;
+            background: transparent;
+            outline: none;
+        }
+        .side_content{
+            width: 598px;
+            height: 393px;
+            overflow: hidden;
+            /*background: blue;*/
+        }
+        .company_menu{
+            float: left;
+            width: 112px;
+            display: block;
+        }
+        .company_menu li{
+            height: 65px;
+            line-height: 65px;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: center;
+            background-color: rgba(132,132,132,0.2);
+            /*background: hotpink;*/
+            color: white;
+        }
+        .company_menu .first_li{
+            padding-top: 3px;
+        }
+
+        .company_logo{
+            display: block;
+            height: 395px;
+            overflow: hidden;
+            margin-left: 110px;
+            /*background-color: #00b3ee;*/
+        }
+        .company_logo ul{
+            margin-left: 9px;
+        }
+        .company_logo li{
+            float: left;
+            margin-bottom: 5px;
+            margin-right: 5px;
+
+        }
+        .company_logo li a img{
+            display: block;
+            opacity: 0.7;
+            width: 154px;
+            height: 75px;
+        }
+
+        .register{
+            position: relative;
+            float: right;
+            width: 370px;
+            height: 470px;
+            margin-top: 67px;
+            background: white;
+        }
+        .register h3{
+            color: #ff9500;
+            text-align: left;
+            font-weight: 400;
+            font-size: 26px;
+            height: 57px;
+            line-height: 57px;
+            margin-bottom: 5px;
+            padding: 0 30px;
+        }
+        .register .login-form{
+            padding: 0 30px;
+            margin-bottom: 20px;
+            width: 310px;
+            height: 46px;
+            display: block;
+
+        }
+        .register .login-form input{
+            width: 294px;
+            height: 18px;
+            border: 1px solid #ccc;
+            background: white;
+            padding: 14px 7px;
+            font-size: 16px;
+            font-family: '微软雅黑', 'Microsoft Yahei', Simsun, SimHei;
+        }
+        .register .login-form .text_code{
+            width: 114px;
+            height: 18px;
+            border: 1px solid #ccc;
+            background: white;
+            padding: 14px 7px;
+            font-size: 16px;
+
+        }
+        .register .login-form .code_btn{
+            display: inline-block;
+            padding: 5px;
+            font-size: 14px;
+            height: 36px;
+            line-height: 36px;
+            margin-left: 2px;
+            width: 158px;
+            color: #3d9ccc;
+            background: #e9f1f5;
+            border: 1px solid #e4ecf0;
+            text-align: center;
+
+        }
+        .register .login-form .warning_btn{
+            background: #ff9500;
+            color: white;
+            font-size: 24px;
+            font-family:Tahoma,"\5b8b\4f53",Arial,Helvetica,Arial,sans-serif; ;
+            height: 58px;
+            line-height: 58px;
+            width: 310px;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .register .login-form .checkbox{
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            cursor: pointer;
+        }
+
+        .register .login-form .accept{
+            color: #666;
+            font-size: 12px;
+            font-family:  "Microsoft YaHei";;
+            padding-top: 19px;
+            line-height: 20px;
+
+        }
+
+        .register .login-form p{
+            position: absolute;
+            float: right;
+            background: #f8f8f8;
+            width: 370px;
+            height: 56px;
+            line-height: 56px;
+            left: 0;
+            bottom: 0;
+            font-size: 18px;
+            color: #333333;
+            text-align: center;
+        }
+
+
+
+
+        .footer{
+            display: block;
+            clear: both;
+            background: #f6f6f6;
+            /*margin-top: 20px;*/
+            padding: 20px 0;
+            color: #999;
+            text-align: center;
+        }
+        .footer p{
+            font-family: '微软雅黑', 'Microsoft Yahei', Simsun, SimHei;
+            font-size: 12px;
+            line-height: 20px;
+            color: #999;
+            text-align: center;
+        }
+
+        .muted{
+            width: 370px;
+            text-align: center;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="header">
+<div class="box">
+    <div class="header_left_logo"><img src="img/logo_e062b0a3.png" alt=""/></div>
+    <div class="header_right">
+        <a>我是猎头</a>
+        <a>我是企业HR</a>
+        <span></span>
+        <a>手机猎聘</a>
+    </div>
+</div>
+</div>
+<div class="background">
+    <div class="container">
+        <div class="side">
+            <form class="search_box">
+                <div class="input_main"><input type="text" placeholder="输入职位搜索关键词，如'销售经理'"/></div>
+                <div class="search_btn"><button>猎聘一下</button></div>
+            </form>
+            <div class="side_content">
+                <div class="company_menu">
+                    <ul>
+                        <li class="first_li">IT 互联网</li>
+                        <li>金融</li>
+                        <li>房地产</li>
+                        <li>消费品</li>
+                        <li>汽车制造</li>
+                        <li>医疗化工</li>
+                    </ul>
+
+                </div>
+                <div class="company_logo">
+                    <ul>
+                        <li><a href=""><img src="img/1.png"> </a></li>
+                        <li><a href=""><img src="img/1.png"> </a></li>
+                        <li><a href=""><img src="img/1.png"> </a></li>
+                        <li><a href=""><img src="img/1.png"> </a></li>
+                        <li><a href=""><img src="img/1.png"> </a></li>
+                        <li><a href=""><img src="img/1.png"> </a></li>
+                        <li><a href=""><img src="img/1.png"> </a></li>
+                        <li><a href=""><img src="img/1.png"> </a></li>
+                        <li><a href=""><img src="img/1.png"> </a></li>
+                        <li><a href=""><img src="img/1.png"> </a></li>
+                        <li><a href=""><img src="img/1.png"> </a></li>
+                        <li><a href=""><img src="img/1.png"> </a></li>
+                        <li><a href=""><img src="img/1.png"> </a></li>
+                        <li><a href=""><img src="img/1.png"> </a></li>
+                        <li><a href=""><img src="img/1.png"> </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="register">
+            <h3>10秒注册，获得高薪</h3>
+            <div class="login-form">
+                <input type="text" placeholder="请输入您常用邮箱"/>
+            </div>
+            <div class="login-form">
+                <input  type="text" placeholder="请输入密码"/>
+            </div>
+            <div class="login-form">
+                <input class="text_code" type="text" placeholder="验证码"/>
+                <a  class="code_btn" href="javascript:;">获取验证码</a>
+            </div>
+           <P style="width: 310px; color:white;height: 60px;background: #ff9500; margin: auto; text-align: center;line-height: 60px; border-radius: 3px;font-size: 18px">免费注册</P>
+            <div class="login-form" style="margin-top: 10px">
+                <label>
+                    <input type="checkbox" class="checkbox" style="vertical-align: middle"/>
+                </label>
+                <span class="accept">
+                    "我已阅读并同意"
+                    <a href="https://www.liepin.com/user/agreement.shtml">《用户服务协议》</a>
+                </span>
+            </div>
+                <p class="muted">已有账号直接<a  class="goLogin" href="javascript:; ">登录>> </a> </p>
+
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <p>京ICP备09083200号 京ICP证070419号 人才服务许可证:RC0710280 京公网安备11010502026763</p>
+    <p>Copyright©2000-2016 liepin.com All Rights Reserved</p>
+</div>
+
+</body>
+</html>
