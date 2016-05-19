@@ -1,2872 +1,498 @@
 <!DOCTYPE html>
-<html>
-<head lang="en">
+<html lang="en">
+<head>
     <meta charset="UTF-8">
-    <title>【猎聘网】招聘_找工作_精英职业发展平台</title>
-    <style type="text/css">
-
-        * {
-            margin: 0;
-            padding: 0;
-            border: none;
-
-        }
-
-        ul, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, p, blockquote, th, table, tr, td, ins, hr {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        .header {
-            width: 100%;
-            height: 50px;
-            background: #333;
-        }
-
-        .box {
-            width: 980px;
-            margin: 0 auto;
-            background: #333;
-            font-size: 12px;
-        }
-
-        .box .header_left_logo {
-            position: relative;
-            display: block;
-            float: left;
-            padding: 5px 20px 5px 0;
-            width: 245px;
-            height: 40px;
-            cursor: pointer;
-        }
-
-        .box .header_left_logo .logo_link {
-            float: left;
-            padding-right: 0;
-            width: 110px;
-            height: 40px;
-            position: relative;
-        }
-
-        .box .header_left_logo .change_city {
-            position: absolute;
-            display: inline-block;
-            float: left;
-            height: 22px;
-            line-height: 20px;
-            padding-left: 10px;
-            margin-top: 10px;
-            color: #ccc;
-            border-left: 1px solid #5c5d61;
-            font-size: 12px;
-            font-family: Tahoma, "\5b8b\4f53", Arial, Helvetica, Arial, sans-serif;;
-            padding-right: 30px;
-            text-decoration: none;
-            outline: 0;
-        }
-
-        .box .header_left_logo .change_city b {
-            display: inline-block;
-            margin-top: -3px;
-            font-weight: 400;
-        }
-
-        .box .header_left_logo .change_city label {
-            margin-top: -3px;
-            width: 73px;
-            color: #999;
-            cursor: pointer;
-            display: inline-block;
-            font-weight: 400;
-        }
-        .box .nav {
-            float: left;
-            line-height: 50px;
-            display: block;
-
-        }
-
-        .box .nav li {
-            float: left;
-            display: list-item;
-            width: 70px;
-            height: 50px;
-            line-height: 50px;
-            text-align: center;
-            cursor: pointer;
-        }
-
-        .box .nav li a {
-            display: block;
-            padding: 0 20px;
-            font-size: 14px;
-            font-family: Tahoma, "\5b8b\4f53", Arial, Helvetica, Arial, sans-serif;
-            color: #ccc;
-            text-decoration: none;
-            outline: 0;
-        }
-        .bg{
-            background: #3689b3 !important;
-            color: white !important;
-        }
-        .box .nav li a:hover{
-            color: white;
-            background: #ccc;
-        }
-        .box .header_right {
-            position: relative;
-            height: 50px;
-            float: right;
-            color: #999;
-        }
-
-        .box .header_right span {
-            display: inline-block;
-            margin-top: 17px;
-            padding-left: 10px;
-            position: absolute;
-            height: 16px;
-            width: 1px;
-            border-left: 1px #999999 dotted;
-        }
-
-        .box .header_right a {
-            float: left;
-            margin: 0 10px;
-            height: 50px;
-            line-height: 50px;
-            cursor: pointer;
-        }
-        .box .header_right a:hover{
-            color: white;
-        }
-        .home {
-            position: relative;
-            overflow-x: hidden;
-        }
-
-        .banner {
-            width: 100%;
-            height: 290px;
-            position: relative;
-            margin-top: -20px;
-            display: block;
-            overflow: hidden;
-        }
-
-        .banner .bannerInner {
-            width: 100%;
-            height: 100%;
-        }
-
-        .banner .bannerInner div {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 0;
-            opacity: 1;
-            filter: alpha(opacity=100);
-        }
-
-        .banner .bannerInner img {
-            width: 100%;
-            height: 100%;
-            /*display: none;*/
-        }
-
-        .banner .bannerTip {
-            position: absolute;
-            bottom: 20px;
-            text-align: center;
-            z-index: 2;
-            width: 100%;
-        }
-
-        .banner .bannerTip li {
-            width: 14px;
-            height: 14px;
-            display: inline-block;
-            margin-right: 10px;
-            border-radius: 50%;
-            cursor: pointer;
-            background: #666;
-            opacity: 0.6;
-        }
-
-        .banner .bannerTip li.bg {
-            background: red;
-        }
-
-        /*搜索框*/
-
-        .container {
-            position: relative;
-            width: 100%;
-            height: 2000px;
-            margin: 0 auto;
-            font-size: 14px;
-        }
-
-        .container .search {
-            padding: 10px;
-            display: block;
-            height: 155px;
-        }
-
-        .container .search .warp_search {
-            font-size: 14px;
-            margin-right: auto;
-            margin-left: auto;
-            width: 980px;
-            height: 98px;
-            display: block;
-            line-height: 20px;
-            overflow: hidden;
-        }
-
-        .container .search .search_left {
-            margin: 0 0 18px;
-            display: block;
-        }
-
-        .search_form {
-            position: relative;
-            display: block;
-            float: left;
-            width: 650px;
-            height: 24px;
-            padding: 9px;
-            border: 2px solid #d9d9d9;
-            background-color: white;
-            border-right: 0;
-            border-radius: 2px 0 0 2px;
-            overflow: hidden;
-        }
-
-        .input_main {
-            position: relative;
-            float: left;
-            width: 100%;
-            height: 24px;
-            line-height: 24px;
-            padding: 1px 0;
-            font-size: 16px;
-            color: #999;
-        }
-        .input_main input{
-            width: 300px;
-            outline: none;
-        }
-        .search_btn {
-            position: absolute;
-            top: 0;
-            right: 0;
-            padding: 0 12px;
-            width: 86px;
-            height: 46px;
-            line-height: 42px;
-            background-color: #3d9ccc;
-            display: inline-block;
-            text-align: center;
-        }
-
-        .search_btn button {
-            padding: 1px 6px;
-            font-size: 14px;
-            font-family: "Microsoft YaHei";
-            color: white;
-            background: transparent;
-            outline: none;
-
-        }
-
-        .container .search .search_left .search_link {
-            float: left;
-            line-height: 34px;
-        }
-
-        .container .search .search_left .search_link a {
-            margin-right: 15px;
-            float: left;
-            color: #999;
-            text-decoration: none;
-            outline: 0;
-            font-size: 14px;
-            font-family: 'Microsoft Yahei', Tahoma, "\5b8b\4f53", Arial, Helvetica, Arial, sans-serif;
-        }
-
-        .container .search .search-right {
-            width: 290px;
-            float: right;
-            position: absolute;
-            top: 12px;
-            right: 180px;
-            height: 26px;
-            padding: 9px 0;
-            text-align: center;
-            border: 1px solid #f2f2f2;
-            background: #f6f6f6;
-            line-height: 28px;
-            color: #999;
-            font-size: 16px;
-            font-family: 'Microsoft Yahei', Tahoma, "\5b8b\4f53", Arial, Helvetica, Arial, sans-serif;;
-        }
-
-        .container .search .search-right span {
-            height: 26px;
-            display: inline-block;
-            padding: 0 6px;
-            border: 1px solid #f2f2f2;
-            line-height: 26px;
-            background: white;
-            vertical-align: top;
-            text-align: center;
-            font-size: 16px;
-            font-family: 'Microsoft Yahei', Tahoma, "\5b8b\4f53", Arial, Helvetica, Arial, sans-serif;;
-        }
-
-        .container .wrap {
-            position: absolute;
-            width: 980px;
-            height: 40px;
-            display: block;
-            line-height: 20px;
-            margin-left: 175px;
-            font-size: 12px;
-            overflow: hidden;
-        }
-        .subsit-btn{
-            overflow: hidden;
-        }
-        .container .subsit-btn a {
-            float: left;
-            display: block;
-            padding: 0 40px;
-            padding-left: 50px;
-            height: 40px;
-            line-height: 40px;
-            margin-left: 0;
-            position: relative;
-            text-align: center;
-            font-weight: 400;
-            font-size: 18px;
-            /*font-family:  'Microsoft Yahei', Tahoma, 宋体, Arial, Helvetica, Arial, sans-serif;*/
-            text-decoration: none;
-            outline: 0;
-            color: #666;
-            border-right: #999999 dashed 1px;
-        }
-        .container .subsit-btn a:hover{
-            color: white;
-        }
-        .tupian1{
-            background: url("img/tupian1.png")no-repeat 20px center;
-        }
-        .tupian2{
-            background: url("img/tupian2.png")no-repeat 20px 8px;
-        }
-        .tupian3{
-            background: url("img/tupian3.png")no-repeat 20px 8px;
-        }
-        .tupian4{
-            background: url("img/tupian4.png")no-repeat 20px 8px;
-        }
-        .tupian5{
-            background: url("img/tupian5.png")no-repeat 20px 8px;
-        }
-        .tupian6{
-            background: url("img/tupian6.png")no-repeat 20px 8px;
-        }
-        .tupian1:hover{
-            background: url("img/tupian11.png")no-repeat 20px center #ffaa00;
-        }
-        .tupian2:hover{
-            background: url("img/tupian22.png")no-repeat 20px 8px #ffaa00;
-        }
-        .tupian3:hover{
-            background: url("img/tupian33.png")no-repeat 20px 8px #ffaa00;
-        }
-        .tupian4:hover{
-            background: url("img/tupian44.png")no-repeat 20px 8px #ffaa00;
-        }
-        .tupian5:hover{
-            background: url("img/tupian55.png")no-repeat 20px 8px #ffaa00;
-        }
-        .tupian6:hover{
-            background: url("img/tupian66.png")no-repeat 20px 8px #ffaa00;
-        }
-        /*行业职位*/
-        .container .hangye{
-            display: block;
-            width: 980px;
-            margin: auto;
-            height: 3014px;
-            line-height: 20px;
-
-        }
-        .container .hangye .hangye_IT,.hangye_banking,.hangye_car,.hangye_house,.hangye_medicare,.hangye_product{
-            display: block;
-            height: 356px;
-            line-height: 20px;
-            margin-bottom: 30px;
-        }
-
-        .container .hangye .hangye_IT .left-part{
-            border-top:5px solid #3ca2f2;
-        }
-        .container .hangye .hangye_house .left-part{
-            border-top:5px solid #ef434c;
-        }
-        .container .hangye .hangye_banking .left-part{
-            border-top:5px solid #fdc00f;
-        }
-        .container .hangye .hangye_product.left-part{
-            border-top:5px solid #6f4ab9;
-        }
-        .container .hangye .hangye_car .left-part{
-            border-top:5px solid #0267f5;
-        }
-        .container .hangye .hangye_medicare .left-part{
-            border-top:5px solid #50b26b;
-        }
-
-        .container .hangye  .left-part{
-            background-color: #f5f5f5;
-            width: 204px;
-            height: 353px;
-            padding: 0 23px;
-            float: left;
-        }
-        .container .hangye .left-part h3{
-            display: block;
-            font-weight: 400;
-            font-size: 24.5px;
-            line-height: 40px;
-            margin: 10px 0;
-            font-family:
-            'Microsoft Yahei', Tahoma, 宋体, Arial, Helvetica, Arial, sans-serif;
-        }
-        .container .hangye .left-part h3 a{
-            color: #3ca2f2;
-            text-decoration: none;
-            cursor: auto;
-        }
-        .container .hangye .left-part .job{
-            height: 120px;
-            border-top: 1px dotted #cfd2e2;
-            padding: 8px 0;
-            overflow: hidden;
-
-        }
-        .container .hangye .left-part .job a{
-            min-width: 95px;
-            vertical-align: middle;
-            display: inline-block;
-            line-height: 31px;
-            font-size: 14px;
-            color: #666;
-            text-decoration: none;
-            outline: 0;
-            font-family: 'Microsoft Yahei',Tahoma,"\5b8b\4f53",Arial,Helvetica,Arial,sans-serif;;
-        }
-
-        .container .hangye .left-part .companies{
-            width: 204px;
-            height: 60px;
-            font-size: 14px;
-            color: #666;
-            border-top: 1px dotted #cfd2e2;
-            padding: 8px 0;
-            overflow: hidden;
-        }
-        .container .hangye .left-part .companies a{
-            min-width: 64px;
-            display: inline-block;
-            line-height: 31px;
-            font-size: 14px;
-            color: #666;
-            text-decoration: none;
-            outline: 0;
-            font-family: 'Microsoft Yahei',Tahoma,"\5b8b\4f53",Arial,Helvetica,Arial,sans-serif;;
-        }
-        .container .hangye .left-part .btn-enter{
-            display: block;
-            margin-top: 12px;
-            background: white;
-            font-size: 16px;
-            text-align: center;
-            line-height: 40px;
-            border-radius: 5px;
-            box-shadow: 2px 2px 2px #ccc;
-            color: #f50;
-        }
-
-        .container .hangye .right-part{
-            display: block;
-            height: 100%;
-            border: 1px solid #ddd;
-            border-left: none;
-            overflow: hidden;
-        }
-        .container .hangye .right-part li{
-            position: relative;
-            width: 337px;
-            height: 60px;
-            padding: 15px 17px 14px 10px;
-            float: left;
-            margin-top: -1px;
-            border-top: 1px solid #f5f5f5;
-        }
-
-        .container .hangye .right-part li .company-logo{
-            float: left;
-            margin-left: 10px;
-            margin-top: 4px;
-            color: #666;
-            text-decoration: none;
-        }
-        .tinyELogo{
-            width: 100px;
-            height: 50px;
-        }
-        .container .hangye .right-part li .job-detail{
-            position: absolute;
-            float: right;
-            margin-left: 145px;
-            display: block;
-            width: 192px;
-            height: 60px;
-            text-align: left;
-
-        }
-        .container .hangye .right-part li .job-detail .job-title a{
-            color: #0077b3;
-            font-size: 16px;
-            font-family: 'Microsoft Yahei',Tahoma,"\5b8b\4f53",Arial,Helvetica,Arial,sans-serif;
-            display: block;
-            width: 190px;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            text-decoration: none;
-            outline: 0;
-        }
-
-        .container .hangye .right-part li .job-detail .job-salary{
-            color: #ee5f03;
-            font-size: 14px;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            font-family:  'Microsoft Yahei',Tahoma,"\5b8b\4f53",Arial,Helvetica,Arial,sans-serif;;
-        }
-        .container .hangye .right-part li .job-detail .job-salary em{
-            font-style: normal;
-            margin: 0;
-            padding: 0;
-            float: left;
-            text-align: left;
-        }
-
-        .container .hangye .right-part li .job-detail .job-salary span{
-            color: #666;
-            font-size: 12px;
-            margin-left: 8px;
-        }
-        .container .hangye .right-part li .job-detail .company-name{
-            width: 190px;
-            height: 20px;
-            line-height: 20px;
-            display: block;
-            text-align: left;
-        }
-        .container .hangye .right-part li .job-detail .company-name a{
-            width: 190px;
-            height: 20px;
-            color: #999;
-            font-size: 12px;
-            display: block;
-        }
-
-
-        .seo-after{
-            display: block;
-            width: 980px;
-            height: 668px;
-        }
-        .hot-title{
-            height: 42px;
-            display: block;
-            margin-top: 60px;
-            margin-bottom: 10px;
-            font-size:24.5px;
-            font-weight: bold;
-        }
-        .job-box{
-            display: block;
-            position: relative;
-        }
-        .hot-title span{
-            display: inline-block;
-            width: 244px;
-            border-left: 5px solid #ff5600;
-            font-size: 22px;
-            color: #4f5364;
-            padding-left: 18px;
-        }
-        .job-box .hot-job{
-            display: block;
-            background-color: #f5f5f5;
-            width: 252px;
-            float: left;
-        }
-        .job-box .hot-job li{
-            line-height: 36px;
-            padding: 4px 0 4px 7px;
-            display: list-item;
-        }
-        .job-box .hot-job li .indus-title{
-            display: block;
-            font-size: 16px;
-            color: #4f5364;
-            padding-left: 24px;
-            position: relative;
-            width: 222px;
-            text-decoration: none;
-            outline: 0;
-        }
-        .job-box .hot-job li .sub-nav{
-            position: absolute;
-            left: 252px;
-            bottom: 0;
-            width: 646px;
-            height:104px;
-            background-color: #fff;
-            border:1px solid #eee;
-            overflow: auto;
-            padding: 40px 40px 0;
-            display: none;
-            z-index: 1;
-
-        }
-        .job-box .company-jobs{
-            display: block;
-            width: 728px;
-            float: right;
-        }
-        .job-box .company-jobs li{
-            width: 222px;
-            height: 176px;
-            margin-left: 20px;
-            margin-bottom: 29px;
-            float: left;
-            text-align: left;
-            display: list-item;
-        }
-        .job-box .company-jobs li .famous-logo{
-            border: 1px solid #d7d7d7;
-            margin-bottom: 18px;
-            padding: 15px 30px;
-            display: block;
-        }
-        .job-box .company-jobs li .job-name{
-            color: #999;
-            line-height: 17px;
-            font-size: 14px;
-            display: block;
-        }
-        .job-box .company-jobs li .job-name .normalELogo{
-            width: 160px;
-            height: 80px;
-        }
-        .job-box .company-jobs li .job-name span{
-            color: #0077b3;
-            display: inline-block;
-            width: 140px;
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            float: left;
-        }
-        .job-box .company-jobs li .job-name em{
-            float: right;
-            text-align: right;
-            width: 77px;
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            font-style: normal;
-        }
-
-        .other{
-            padding: 30px 0;
-            display: block;
-            width: 980px;
-            margin: auto;
-        }
-        .links{
-            display: block;
-            color: #999;
-            margin-top: 20px;
-            margin-bottom: -20px;
-            margin-right: -442.5px;
-            width: 980px;
-
-            line-height: 20px;
-        }
-        .links .links-wrap{
-            border-top:1px solid #d2d2d2;
-            margin-bottom: 0;
-            padding:14px 0;
-            line-height: 26px;
-            display: inline-block;
-
-        }
-        .links .links-title{
-            font-size: 12px;
-            width: 60px;
-            white-space: nowrap;
-            font-weight: 700;
-            float: left;
-            text-decoration: none;
-        }
-
-        .links .links-content{
-            width: 910px;
-            float: right;
-        }
-        .links .links-content a{
-            font-size: 12px;
-            float: left;
-            margin-right: 10px;
-            white-space: nowrap;
-            text-decoration: none;
-            outline: 0;
-            color: #999;
-            text-align: center;
-        }
-
-        /*底部*/
-        .footer-p{
-            margin-top: 20px;
-            overflow: hidden;
-            display: block;
-        }
-        .footer-p hr{
-            margin: 5px 0;
-            border: 0;
-            border-top: 1px solid #ccc;
-            border-bottom: 1px solid #fff;
-            box-sizing: content-box;
-            height: 0;
-        }
-        .footer-p .wrap{
-            position: relative;
-            width: 980px;
-            height: 143px;
-            margin: 0 auto;
-            font-size: 12px;
-            font-family: 'Microsoft Yahei', Tahoma, 宋体, Arial, Helvetica, A;
-        }
-        .footer-p .wrap .copyright{
-            height: 128px;
-            color: #999;
-            line-height: 22px;
-            margin-top: 15px;
-            display: block;
-
-        }
-        .footer-p .wrap .copyright .copy-side{
-            float: left;
-            width: 160px;
-            height: 78px;
-            font-size: 14px;
-            padding-top: 50px;
-            text-align: center;
-            line-height: 25px;
-            background: url("img/footer-contact-icon_9a7bacf9.png") center top no-repeat;
-        }
-         .copy-side strong{
-            font-size: 20px;
-            font-weight: 400;
-        }
-        .footer-p .wrap .copyright .copy-side small{
-            font-size: 85%;
-            font-size: 12px;
-        }
-        .footer-p .wrap .copyright .copy-main{
-            margin-left: 170px;
-            margin-right: -20px;
-        }
-        .footer-p .wrap .copyright .copy-main .item{
-            float: left;
-            height: 128px;
-            padding: 0 40px;
-            border-left: 1px dotted #d2d2d2;
-        }
-        .footer-p .wrap .copyright .copy-main .item dl dt{
-            font-size: 14px;
-            font-weight: 700;
-            color: #666;
-            display: block;
-        }
-        .footer-p .wrap .copyright .copy-main .item dl dd{
-            margin-left: 0;
-            display: block;
-
-
-        }
-        .footer-p .wrap .copyright a{
-            color: #999;
-            text-decoration: none;
-            outline: 0;
-        }
-        .footer-p .wrap .copyright .copy-main .item-weibo{
-            display: block;
-            width: 62px;
-            height: 128px;
-            text-align: center;
-            color: #666;
-            padding: 0 25px;
-            float: left;
-            
-        }
-        .footer-p .wrap .copyright .copy-main .item-weibo .weibo{
-            display: inline-block;
-            border: 1px solid #ccc;
-            vertical-align: middle;
-            width: 44px;
-            height: 44px;
-            line-height: 44px;
-            background:url("img/footer-weibo-icon_b22b1824.png")0 0 no-repeat;
-        }
-        .footer-p .wrap .copyright .copy-main .item-weibo a.btn-sina{
-            display: inline-block;
-            vertical-align: middle;
-            width: 62px;
-            height: 22px;
-            line-height: 22px;
-            margin-top: 10px;
-            background: url("img/footer-sina-icon_c6fbbce7.png") 0 0 no-repeat;
-        }
-        .footer-p .wrap .copyright .copy-main .item-apps{
-            text-align: center;
-            color: #666;
-            padding: 0 25px;
-
-        }
-        .footer-p .wrap .copyright .copy-main .item-apps .mishu{
-            display: inline-block;
-            border: 1px solid #ccc;
-            width: 78px;
-            height: 78px;
-            line-height: 78px;
-            background: url("img/icon-mishu_25bf7e1b.png")no-repeat;
-        }
-
-         .copy-footer{
-             width: 100%;
-            position: absolute;
-            clear: both;
-            height: 40px;
-            background: #f6f6f6;
-            margin-top: 20px;
-            padding: 20px 0;
-            color: #999;
-            text-align: center;
-            display: block;
-            font-size: 12px;
-            font-family: 'Microsoft Yahei',Tahoma,"\5b8b\4f53",Arial,Helvetica,Arial,sans-serif;
-            line-height: 20px;
-        }
-         .copy-footer p{
-            margin: 0;
-            display: block;
-        }
-
-
-
-
-    </style>
+    <title>时光商城：电影 正版 原创</title>
+    <link href="css/shangp.css" type="text/css" rel="stylesheet">
 </head>
 <body>
 <div class="header">
-    <div class="box">
-        <div class="header_left_logo">
-            <span class="logo-city">
-                <a class="logo_link" href="javascript:;"> <img src="img/logo_e062b0a3.png" alt=""/></a>
-                <a class="change_city" href="javascript:;">
-                    <b>全国</b>
-                    <label>
-                        [切换城市]
-                        <i class="arrow"></i>
-                    </label>
-                </a>
-            </span>
-        </div>
-        <div class="nav">
-            <ul>
-                <li><a href="javascript:;" class="bg">首页</a></li>
-                <li><a href="javascript:;">职位</a></li>
-                <li><a href="javascript:;">社区</a></li>
-            </ul>
-        </div>
-        <div class="header_right">
-            <a>我是猎头</a>
-            <a>我是企业HR</a>
-            <span></span>
-            <a>手机猎聘</a>
+    <div class="sousuo">
+        <span><img src="img/sousuo_zuo.png"> </span>
+        <input placeholder="按名称、电影、品牌等搜索商品">
+        <span style="cursor: pointer"><img src="img/sousuo_you.png"> </span>
+
+        <div class="xiala" id="xia">
+            <h1>商品</h1>
+
+            <div class="xialakuang" id="xiala">
+                <a>全部</a>
+                <a>电影</a>
+                <a>影人</a>
+                <a>影院</a>
+                <a>商品</a>
+            </div>
         </div>
     </div>
 </div>
-<div class="home">
-    <!--轮播图区域-->
-    <div class="banner">
+<div class="mianh">
+    <div class="slogo">
+        <img src="img/logo.png">
+    </div>
+</div>
+<div class="main">
+    <div class="mainzhong">
+        <div class="mainleft">
+            <a>首页</a>
+            <a>新闻</a>
+            <a>影院</a>
+            <a class="curse">商城</a>
+            <a>社区</a>
+            <a>发现</a>
+        </div>
+        <div class="mainright">
+            <div class="wzbj">我在:北京</div>
+
+            <div class="gwc" id="gwc">
+
+                <div class="kong" id="kong">您的购物车是空的,赶快选购哦</div>
+            </div>
+        </div>
+        <div class="bann" style="clear: both" id="bann">
+            <div class="inner">
+                <div>
+                    <div class="dakuang">
+                        <div class="wenzi1"><p class="pp">原创</p>
+
+                            <p style="margin-top: 20px">蝙蝠侠黑暗套装</p></div>
+                        <div class="tupian"><img src="img/shangmaozi.jpg"></div>
+                    </div>
+                    <div class="dakuang">
+                        <div class="wenzi1"><p class="pp">原创</p>
+
+                            <p style="margin-top: 20px">蝙蝠侠黑暗套装</p></div>
+                        <div class="tupian"><img src="img/shangbianfuxia.jpg"></div>
+                    </div>
+                    <div class="dakuang">
+                        <div class="wenzi1"><p class="pp">原创</p>
+
+                            <p style="margin-top: 20px">疯狂可爱抱枕</p></div>
+                        <div class="tupian"><img src="img/shanghuli.jpg"></div>
+                    </div>
+                </div>
+                <div>
+                    <div class="dakuang">
+                        <div class="wenzi1"><p class="pp">原创</p>
+
+                            <p style="margin-top: 20px">蝙蝠侠黑暗套装</p></div>
+                        <div class="tupian"><img src="img/shangbiao.jpg"></div>
+                    </div>
+                    <div class="dakuang">
+                        <div class="wenzi1"><p class="pp">原创</p>
+
+                            <p style="margin-top: 20px">蝙蝠侠黑暗套装</p></div>
+                        <div class="tupian"><img src="img/shangbianfuxia.jpg"></div>
+                    </div>
+                    <div class="dakuang">
+                        <div class="wenzi1"><p class="pp">原创</p>
+
+                            <p style="margin-top: 20px">蝙蝠侠黑暗套装</p></div>
+                        <div class="tupian"><img src="img/shangchaoren.jpg"></div>
+                    </div>
+                </div>
+                <div>
+                    <div class="dakuang">
+                        <div class="wenzi1"><p class="pp">原创</p>
+
+                            <p style="margin-top: 20px">蝙蝠侠黑暗套装</p></div>
+                        <div class="tupian"><img src="img/shangmaozi.jpg"></div>
+                    </div>
+                    <div class="dakuang">
+                        <div class="wenzi1"><p class="pp">原创</p>
+
+                            <p style="margin-top: 20px">蝙蝠侠黑暗套装</p></div>
+                        <div class="tupian"><img src="img/shangbianfuxia.jpg"></div>
+                    </div>
+                    <div class="dakuang">
+                        <div class="wenzi1"><p class="pp">原创</p>
+
+                            <p style="margin-top: 20px">蝙蝠侠黑暗套装</p></div>
+                        <div class="tupian"><img src="img/shanghuli.jpg"></div>
+                    </div>
+                </div>
+            </div>
+            <a class="banerleft"></a>
+            <a class="banergiht"></a>
+        </div>
+    </div>
+</div>
+<div class="navbox">
+    <div class="nav">
+        <a style="margin-left: 350px">新品登录</a>
+        <a>预售</a>
+        <a>礼品</a>
+        <a>发烧友</a>
+        <a>会员俱乐部</a>
+        <a>门店列表</a>
+    </div>
+    <div class="banner" id="banner">
         <div class="bannerInner">
-            <div><img src="img/banner1.jpg"/></div>
-            <div><img src="img/banner1.jpg"/></div>
-            <div><img src="img/banner1.jpg"/></div>
-            <div><img src="img/banner1.jpg"/></div>
-            <div><img src="img/banner1.jpg"/></div>
-            <div><img src="img/banner1.jpg"/></div>
 
         </div>
         <ul class="bannerTip">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+
         </ul>
+        <a href="javascript:;" class="bannerLeft"></a>
+        <a href="javascript:;" class="bannerRight"></a>
+    </div>
+    <div class="quanbu">
+        <div class="quanbubox">
+            <h1 class="quanh1">全部商品分类</h1>
+
+            <div class="boxbox">
+                <h1 class="bo1">玩具模型</h1>
+
+                <p><a>模型公仔</a><a>仿真收藏</a><a>变形金刚</a></p>
+
+                <p><a>毛绒玩具</a><a>角色扮演</a><a>益智拼插</a></p>
+            </div>
+            <div class="boxbox">
+                <h1 class="bo2">数码配件</h1>
+
+                <p><a>手机配件</a><a>充电装备</a><a>时尚U盘</a></p>
+
+                <p><a>电脑周边</a><a>车载用品</a><a>趣味拍照</a></p>
+            </div>
+            <div class="boxbox">
+                <h1 class="bo3">服装服饰</h1>
+
+                <p><a>男装</a><a>女装</a><a>童装</a></p>
+
+                <p><a>鞋靴</a><a>时尚包品</a><a>服饰配件</a></p>
+            </div>
+            <div class="boxbox" style="padding-bottom: 40px">
+                <h1 class="bo4">居家日用</h1>
+
+                <p><a>创意文具</a><a>抱枕靠垫</a><a>水杯/水壶</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="photobox">
+    <div class="photozuo">
+        <img src="img/shangpzhu1.jpg">
+    </div>
+    <div class="photoyou">
+        <img src="img/shangpzhu2.jpg">
+        <img src="img/shangpzhu3.jpg">
+        <img src="img/shangpzhu4.jpg" style="margin-left: 6px;">
+        <img src="img/shangpzhu5.jpg">
+        <img src="img/shangpzhu6.jpg">
+    </div>
+    <div class="jishiqi">
+        <div id="timeDiv">距离结束 <span>01:23:08</span></div>
     </div>
 </div>
 
-<div class="container">
-    <!--搜索-->
-    <div class="search">
-        <div class="warp_search">
-            <div class="search_left">
-                <div class="search_form">
-                    <div class="input_main"><input name="key" placeholder="请输入职位关键字：如 销售总监等"/></div>
-                    <div class="search_btn">
-                        <button>搜索</button>
-                    </div>
-                </div>
-                <p class="search_link">
-                    <a href="javascript:;">Java</a>
-                    <a href="javascript:;">Flash</a>
-                    <a href="javascript:;">Python</a>
-                    <a href="javascript:;">Android</a>
-                    <a href="javascript:;">室内设计</a>
-                    <a href="javascript:;">保险</a>
-                    <a href="javascript:;">期货</a>
-                    <a href="javascript:;">银行</a>
-                    <a href="javascript:;">产品经理</a>
-                    <a href="javascript:;">信托</a>
-                </p>
-            </div>
-            <p class="search-right">
-                本周新增职位
-                <span>1</span>
-                <span>8</span>
-                <span>7</span>
-                <span>6</span>
-                <span>4</span>
-                个
-            </p>
-        </div>
-        <div class="wrap">
-            <p class="subsit-btn">
-                <a href="javascript:;" class="tupian1">
-
-                    IT.互联网
-                </a>
-
-                <a href="javascript:;" class="tupian2">
-                    <span class="icons"></span>
-                    房地产
-                </a>
-
-                <a href="javascript:;" class="tupian3">
-
-                     金 融
-                </a>
-                <a href="javascript:;" class="tupian4">
-
-                    消费品
-                </a>
-                <a href="javascript:;" class="tupian5">
-
-                    汽车.制造
-                </a>
-
-                <a href="javascript:;" class="tupian6">
-
-                    医疗.化工
-                </a>
-            </p>
-        </div>
-
-    </div>
-
-    <!--行业职位-->
-    <div class="hangye">
-        <div class="hangye_IT">
-            <div class="left-part">
-                <h3>
-                    <a href="javascript:;">
-                        <span class="icons24"></span>
-                        IT·互联网</a>
-                </h3>
-
-                <div class="job">
-                    <a href="javascript:;">Java</a>
-                    <a href="javascript:;">产品经理</a>
-                    <a href="javascript:;">Python</a>
-                    <a href="javascript:;">iOS</a>
-                    <a href="javascript:;">PHP</a>
-                    <a href="javascript:;">Android</a>
-                    <a href="javascript:;">UI设计师</a>
-                    <a href="javascript:;">Html5</a>
-                </div>
-                <div class="companies">
-                    <a href="javascript:;">乐视</a>
-                    <a href="javascript:;">努比亚</a>
-                    <a href="javascript:;">易迅电商</a>
-                    <a href="javascript:;">小米</a>
-                    <a href="javascript:;">招商银行</a>
-                    <a href="javascript:;">迅雷</a>
-                </div>
-                <a href="http://www.liepin.com/it/" class="btn-enter">进入IT 互联网分站</a>
-            </div>
-            <ul class="right-part">
-                <li class="clearfix">
-                    <a href="javascript:;" class="company-logo">
-                        <img src="img/etocrm.png" alt="公司" class="tinyELogo"/></a>
-                    <div class="job-detail">
-                        <p class="job-title">
-                            <a href="javascript:;">PHP工程师</a>
-                        </p>
-
-                        <p class="job-salary">
-                            <em>
-                                18-30万
-                                <span>上海-徐汇区</span>
-                            </em>
-                        </p>
-
-                        <p class="company-name">
-                            <a href="javascript:;">齐数科技（上海）有限公司</a>
-                        </p>
-                    </div>
-                </li>
-                <li class="clearfix">
-                    <a href="javascript:;" class="company-logo">
-                        <img src="img/etocrm.png" alt="公司" class="tinyELogo"/>
-                    </a>
-
-                    <div class="job-detail">
-                        <p class="job-title">
-                            <a href="javascript:;">PHP工程师</a>
-                        </p>
-
-                        <p class="job-salary">
-                            <em>
-                                18-30万
-                                <span>上海-徐汇区</span>
-                            </em>
-                        </p>
-
-                        <p class="company-name">
-                            <a href="javascript:;">齐数科技（上海）有限公司</a>
-                        </p>
-                    </div>
-                </li>
-                <li class="clearfix">
-                    <a href="javascript:;" class="company-logo">
-                        <img src="img/etocrm.png" alt="公司" class="tinyELogo"/>
-                    </a>
-
-                    <div class="job-detail">
-                        <p class="job-title">
-                            <a href="javascript:;">PHP工程师</a>
-                        </p>
-
-                        <p class="job-salary">
-                            <em>
-                                18-30万
-                                <span>上海-徐汇区</span>
-                            </em>
-                        </p>
-
-                        <p class="company-name">
-                            <a href="javascript:;">齐数科技（上海）有限公司</a>
-                        </p>
-                    </div>
-                </li>
-                <li class="clearfix">
-                    <a href="javascript:;" class="company-logo">
-                        <img src="img/etocrm.png" alt="公司" class="tinyELogo"/>
-                    </a>
-
-                    <div class="job-detail">
-                        <p class="job-title">
-                            <a href="javascript:;">PHP工程师</a>
-                        </p>
-
-                        <p class="job-salary">
-                            <em>
-                                18-30万
-                                <span>上海-徐汇区</span>
-                            </em>
-                        </p>
-
-                        <p class="company-name">
-                            <a href="javascript:;">齐数科技（上海）有限公司</a>
-                        </p>
-                    </div>
-                </li>
-                <li class="clearfix">
-                    <a href="javascript:;" class="company-logo">
-                        <img src="img/etocrm.png" alt="公司" class="tinyELogo"/>
-                    </a>
-
-                    <div class="job-detail">
-                        <p class="job-title">
-                            <a href="javascript:;">PHP工程师</a>
-                        </p>
-
-                        <p class="job-salary">
-                            <em>
-                                18-30万
-                                <span>上海-徐汇区</span>
-                            </em>
-                        </p>
-
-                        <p class="company-name">
-                            <a href="javascript:;">齐数科技（上海）有限公司</a>
-                        </p>
-                    </div>
-                </li>
-                <li class="clearfix">
-                    <a href="javascript:;" class="company-logo">
-                        <img src="img/etocrm.png" alt="公司" class="tinyELogo"/>
-                    </a>
-
-                    <div class="job-detail">
-                        <p class="job-title">
-                            <a href="javascript:;">PHP工程师</a>
-                        </p>
-
-                        <p class="job-salary">
-                            <em>
-                                18-30万
-                                <span>上海-徐汇区</span>
-                            </em>
-                        </p>
-
-                        <p class="company-name">
-                            <a href="javascript:;">齐数科技（上海）有限公司</a>
-                        </p>
-                    </div>
-                </li>
-                <li class="clearfix">
-                    <a href="javascript:;" class="company-logo">
-                        <img src="img/etocrm.png" alt="公司" class="tinyELogo"/>
-                    </a>
-
-                    <div class="job-detail">
-                        <p class="job-title">
-                            <a href="javascript:;">PHP工程师</a>
-                        </p>
-
-                        <p class="job-salary">
-                            <em>
-                                18-30万
-                                <span>上海-徐汇区</span>
-                            </em>
-                        </p>
-
-                        <p class="company-name">
-                            <a href="javascript:;">齐数科技（上海）有限公司</a>
-                        </p>
-                    </div>
-                </li>
-                <li class="clearfix">
-                    <a href="javascript:;" class="company-logo">
-                        <img src="img/etocrm.png" alt="公司" class="tinyELogo"/>
-                    </a>
-
-                    <div class="job-detail">
-                        <p class="job-title">
-                            <a href="javascript:;">PHP工程师</a>
-                        </p>
-
-                        <p class="job-salary">
-                            <em>
-                                18-30万
-                                <span>上海-徐汇区</span>
-                            </em>
-                        </p>
-
-                        <p class="company-name">
-                            <a href="javascript:;">齐数科技（上海）有限公司</a>
-                        </p>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <div class="hangye_house">
-            <div class="left-part">
-                <h3>
-                    <a href="javascript:;">
-                        <span class="icons24"></span>
-                        IT·互联网</a>
-                </h3>
-
-                <div class="job">
-                    <a href="javascript:;">Java</a>
-                    <a href="javascript:;">产品经理</a>
-                    <a href="javascript:;">Python</a>
-                    <a href="javascript:;">iOS</a>
-                    <a href="javascript:;">PHP</a>
-                    <a href="javascript:;">Android</a>
-                    <a href="javascript:;">UI设计师</a>
-                    <a href="javascript:;">Html5</a>
-                </div>
-                <div class="companies">
-                    <a href="javascript:;">乐视</a>
-                    <a href="javascript:;">努比亚</a>
-                    <a href="javascript:;">易迅电商</a>
-                    <a href="javascript:;">小米</a>
-                    <a href="javascript:;">招商银行</a>
-                    <a href="javascript:;">迅雷</a>
-                </div>
-                <a href="http://www.liepin.com/it/" class="btn-enter">进入IT 互联网分站</a>
-            </div>
-            <ul class="right-part">
-                <li class="clearfix">
-                    <a href="javascript:;" class="company-logo">
-                        <img src="img/etocrm.png" alt="公司" class="tinyELogo"/></a>
-                    <div class="job-detail">
-                        <p class="job-title">
-                            <a href="javascript:;">PHP工程师</a>
-                        </p>
-
-                        <p class="job-salary">
-                            <em>
-                                18-30万
-                                <span>上海-徐汇区</span>
-                            </em>
-                        </p>
-
-                        <p class="company-name">
-                            <a href="javascript:;">齐数科技（上海）有限公司</a>
-                        </p>
-                    </div>
-                </li>
-                <li class="clearfix">
-                    <a href="javascript:;" class="company-logo">
-                        <img src="img/etocrm.png" alt="公司" class="tinyELogo"/>
-                    </a>
-
-                    <div class="job-detail">
-                        <p class="job-title">
-                            <a href="javascript:;">PHP工程师</a>
-                        </p>
-
-                        <p class="job-salary">
-                            <em>
-                                18-30万
-                                <span>上海-徐汇区</span>
-                            </em>
-                        </p>
-
-                        <p class="company-name">
-                            <a href="javascript:;">齐数科技（上海）有限公司</a>
-                        </p>
-                    </div>
-                </li>
-                <li class="clearfix">
-                    <a href="javascript:;" class="company-logo">
-                        <img src="img/etocrm.png" alt="公司" class="tinyELogo"/>
-                    </a>
-
-                    <div class="job-detail">
-                        <p class="job-title">
-                            <a href="javascript:;">PHP工程师</a>
-                        </p>
-
-                        <p class="job-salary">
-                            <em>
-                                18-30万
-                                <span>上海-徐汇区</span>
-                            </em>
-                        </p>
-
-                        <p class="company-name">
-                            <a href="javascript:;">齐数科技（上海）有限公司</a>
-                        </p>
-                    </div>
-                </li>
-                <li class="clearfix">
-                    <a href="javascript:;" class="company-logo">
-                        <img src="img/etocrm.png" alt="公司" class="tinyELogo"/>
-                    </a>
-
-                    <div class="job-detail">
-                        <p class="job-title">
-                            <a href="javascript:;">PHP工程师</a>
-                        </p>
-
-                        <p class="job-salary">
-                            <em>
-                                18-30万
-                                <span>上海-徐汇区</span>
-                            </em>
-                        </p>
-
-                        <p class="company-name">
-                            <a href="javascript:;">齐数科技（上海）有限公司</a>
-                        </p>
-                    </div>
-                </li>
-                <li class="clearfix">
-                    <a href="javascript:;" class="company-logo">
-                        <img src="img/etocrm.png" alt="公司" class="tinyELogo"/>
-                    </a>
-
-                    <div class="job-detail">
-                        <p class="job-title">
-                            <a href="javascript:;">PHP工程师</a>
-                        </p>
-
-                        <p class="job-salary">
-                            <em>
-                                18-30万
-                                <span>上海-徐汇区</span>
-                            </em>
-                        </p>
-
-                        <p class="company-name">
-                            <a href="javascript:;">齐数科技（上海）有限公司</a>
-                        </p>
-                    </div>
-                </li>
-                <li class="clearfix">
-                    <a href="javascript:;" class="company-logo">
-                        <img src="img/etocrm.png" alt="公司" class="tinyELogo"/>
-                    </a>
-
-                    <div class="job-detail">
-                        <p class="job-title">
-                            <a href="javascript:;">PHP工程师</a>
-                        </p>
-
-                        <p class="job-salary">
-                            <em>
-                                18-30万
-                                <span>上海-徐汇区</span>
-                            </em>
-                        </p>
-
-                        <p class="company-name">
-                            <a href="javascript:;">齐数科技（上海）有限公司</a>
-                        </p>
-                    </div>
-                </li>
-                <li class="clearfix">
-                    <a href="javascript:;" class="company-logo">
-                        <img src="img/etocrm.png" alt="公司" class="tinyELogo"/>
-                    </a>
-
-                    <div class="job-detail">
-                        <p class="job-title">
-                            <a href="javascript:;">PHP工程师</a>
-                        </p>
-
-                        <p class="job-salary">
-                            <em>
-                                18-30万
-                                <span>上海-徐汇区</span>
-                            </em>
-                        </p>
-
-                        <p class="company-name">
-                            <a href="javascript:;">齐数科技（上海）有限公司</a>
-                        </p>
-                    </div>
-                </li>
-                <li class="clearfix">
-                    <a href="javascript:;" class="company-logo">
-                        <img src="img/etocrm.png" alt="公司" class="tinyELogo"/>
-                    </a>
-
-                    <div class="job-detail">
-                        <p class="job-title">
-                            <a href="javascript:;">PHP工程师</a>
-                        </p>
-
-                        <p class="job-salary">
-                            <em>
-                                18-30万
-                                <span>上海-徐汇区</span>
-                            </em>
-                        </p>
-
-                        <p class="company-name">
-                            <a href="javascript:;">齐数科技（上海）有限公司</a>
-                        </p>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <div class="hangye_banking">
-            <div class="left-part">
-                <h3>
-                    <a href="javascript:;">
-                        <span class="icons24"></span>
-                        IT·互联网</a>
-                </h3>
-
-                <div class="job">
-                    <a href="javascript:;">Java</a>
-                    <a href="javascript:;">产品经理</a>
-                    <a href="javascript:;">Python</a>
-                    <a href="javascript:;">iOS</a>
-                    <a href="javascript:;">PHP</a>
-                    <a href="javascript:;">Android</a>
-                    <a href="javascript:;">UI设计师</a>
-                    <a href="javascript:;">Html5</a>
-                </div>
-                <div class="companies">
-                    <a href="javascript:;">乐视</a>
-                    <a href="javascript:;">努比亚</a>
-                    <a href="javascript:;">易迅电商</a>
-                    <a href="javascript:;">小米</a>
-                    <a href="javascript:;">招商银行</a>
-                    <a href="javascript:;">迅雷</a>
-                </div>
-                <a href="http://www.liepin.com/it/" class="btn-enter">进入IT 互联网分站</a>
-            </div>
-            <ul class="right-part">
-                <li class="clearfix">
-                    <a href="javascript:;" class="company-logo">
-                        <img src="img/etocrm.png" alt="公司" class="tinyELogo"/></a>
-                    <div class="job-detail">
-                        <p class="job-title">
-                            <a href="javascript:;">PHP工程师</a>
-                        </p>
-
-                        <p class="job-salary">
-                            <em>
-                                18-30万
-                                <span>上海-徐汇区</span>
-                            </em>
-                        </p>
-
-                        <p class="company-name">
-                            <a href="javascript:;">齐数科技（上海）有限公司</a>
-                        </p>
-                    </div>
-                </li>
-                <li class="clearfix">
-                    <a href="javascript:;" class="company-logo">
-                        <img src="img/etocrm.png" alt="公司" class="tinyELogo"/>
-                    </a>
-
-                    <div class="job-detail">
-                        <p class="job-title">
-                            <a href="javascript:;">PHP工程师</a>
-                        </p>
-
-                        <p class="job-salary">
-                            <em>
-                                18-30万
-                                <span>上海-徐汇区</span>
-                            </em>
-                        </p>
-
-                        <p class="company-name">
-                            <a href="javascript:;">齐数科技（上海）有限公司</a>
-                        </p>
-                    </div>
-                </li>
-                <li class="clearfix">
-                    <a href="javascript:;" class="company-logo">
-                        <img src="img/etocrm.png" alt="公司" class="tinyELogo"/>
-                    </a>
-
-                    <div class="job-detail">
-                        <p class="job-title">
-                            <a href="javascript:;">PHP工程师</a>
-                        </p>
-
-                        <p class="job-salary">
-                            <em>
-                                18-30万
-                                <span>上海-徐汇区</span>
-                            </em>
-                        </p>
-
-                        <p class="company-name">
-                            <a href="javascript:;">齐数科技（上海）有限公司</a>
-                        </p>
-                    </div>
-                </li>
-                <li class="clearfix">
-                    <a href="javascript:;" class="company-logo">
-                        <img src="img/etocrm.png" alt="公司" class="tinyELogo"/>
-                    </a>
-
-                    <div class="job-detail">
-                        <p class="job-title">
-                            <a href="javascript:;">PHP工程师</a>
-                        </p>
-
-                        <p class="job-salary">
-                            <em>
-                                18-30万
-                                <span>上海-徐汇区</span>
-                            </em>
-                        </p>
-
-                        <p class="company-name">
-                            <a href="javascript:;">齐数科技（上海）有限公司</a>
-                        </p>
-                    </div>
-                </li>
-                <li class="clearfix">
-                    <a href="javascript:;" class="company-logo">
-                        <img src="img/etocrm.png" alt="公司" class="tinyELogo"/>
-                    </a>
-
-                    <div class="job-detail">
-                        <p class="job-title">
-                            <a href="javascript:;">PHP工程师</a>
-                        </p>
-
-                        <p class="job-salary">
-                            <em>
-                                18-30万
-                                <span>上海-徐汇区</span>
-                            </em>
-                        </p>
-
-                        <p class="company-name">
-                            <a href="javascript:;">齐数科技（上海）有限公司</a>
-                        </p>
-                    </div>
-                </li>
-                <li class="clearfix">
-                    <a href="javascript:;" class="company-logo">
-                        <img src="img/etocrm.png" alt="公司" class="tinyELogo"/>
-                    </a>
-
-                    <div class="job-detail">
-                        <p class="job-title">
-                            <a href="javascript:;">PHP工程师</a>
-                        </p>
-
-                        <p class="job-salary">
-                            <em>
-                                18-30万
-                                <span>上海-徐汇区</span>
-                            </em>
-                        </p>
-
-                        <p class="company-name">
-                            <a href="javascript:;">齐数科技（上海）有限公司</a>
-                        </p>
-                    </div>
-                </li>
-                <li class="clearfix">
-                    <a href="javascript:;" class="company-logo">
-                        <img src="img/etocrm.png" alt="公司" class="tinyELogo"/>
-                    </a>
-
-                    <div class="job-detail">
-                        <p class="job-title">
-                            <a href="javascript:;">PHP工程师</a>
-                        </p>
-
-                        <p class="job-salary">
-                            <em>
-                                18-30万
-                                <span>上海-徐汇区</span>
-                            </em>
-                        </p>
-
-                        <p class="company-name">
-                            <a href="javascript:;">齐数科技（上海）有限公司</a>
-                        </p>
-                    </div>
-                </li>
-                <li class="clearfix">
-                    <a href="javascript:;" class="company-logo">
-                        <img src="img/etocrm.png" alt="公司" class="tinyELogo"/>
-                    </a>
-
-                    <div class="job-detail">
-                        <p class="job-title">
-                            <a href="javascript:;">PHP工程师</a>
-                        </p>
-
-                        <p class="job-salary">
-                            <em>
-                                18-30万
-                                <span>上海-徐汇区</span>
-                            </em>
-                        </p>
-
-                        <p class="company-name">
-                            <a href="javascript:;">齐数科技（上海）有限公司</a>
-                        </p>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <div class="hangye_product">
-            <div class="left-part">
-                <h3>
-                    <a href="javascript:;">
-                        <span class="icons24"></span>
-                        IT·互联网</a>
-                </h3>
-
-                <div class="job">
-                    <a href="javascript:;">Java</a>
-                    <a href="javascript:;">产品经理</a>
-                    <a href="javascript:;">Python</a>
-                    <a href="javascript:;">iOS</a>
-                    <a href="javascript:;">PHP</a>
-                    <a href="javascript:;">Android</a>
-                    <a href="javascript:;">UI设计师</a>
-                    <a href="javascript:;">Html5</a>
-                </div>
-                <div class="companies">
-                    <a href="javascript:;">乐视</a>
-                    <a href="javascript:;">努比亚</a>
-                    <a href="javascript:;">易迅电商</a>
-                    <a href="javascript:;">小米</a>
-                    <a href="javascript:;">招商银行</a>
-                    <a href="javascript:;">迅雷</a>
-                </div>
-                <a href="http://www.liepin.com/it/" class="btn-enter">进入IT 互联网分站</a>
-            </div>
-            <ul class="right-part">
-                <li class="clearfix">
-                    <a href="javascript:;" class="company-logo">
-                        <img src="img/etocrm.png" alt="公司" class="tinyELogo"/></a>
-                    <div class="job-detail">
-                        <p class="job-title">
-                            <a href="javascript:;">PHP工程师</a>
-                        </p>
-
-                        <p class="job-salary">
-                            <em>
-                                18-30万
-                                <span>上海-徐汇区</span>
-                            </em>
-                        </p>
-
-                        <p class="company-name">
-                            <a href="javascript:;">齐数科技（上海）有限公司</a>
-                        </p>
-                    </div>
-                </li>
-                <li class="clearfix">
-                    <a href="javascript:;" class="company-logo">
-                        <img src="img/etocrm.png" alt="公司" class="tinyELogo"/>
-                    </a>
-
-                    <div class="job-detail">
-                        <p class="job-title">
-                            <a href="javascript:;">PHP工程师</a>
-                        </p>
-
-                        <p class="job-salary">
-                            <em>
-                                18-30万
-                                <span>上海-徐汇区</span>
-                            </em>
-                        </p>
-
-                        <p class="company-name">
-                            <a href="javascript:;">齐数科技（上海）有限公司</a>
-                        </p>
-                    </div>
-                </li>
-                <li class="clearfix">
-                    <a href="javascript:;" class="company-logo">
-                        <img src="img/etocrm.png" alt="公司" class="tinyELogo"/>
-                    </a>
-
-                    <div class="job-detail">
-                        <p class="job-title">
-                            <a href="javascript:;">PHP工程师</a>
-                        </p>
-
-                        <p class="job-salary">
-                            <em>
-                                18-30万
-                                <span>上海-徐汇区</span>
-                            </em>
-                        </p>
-
-                        <p class="company-name">
-                            <a href="javascript:;">齐数科技（上海）有限公司</a>
-                        </p>
-                    </div>
-                </li>
-                <li class="clearfix">
-                    <a href="javascript:;" class="company-logo">
-                        <img src="img/etocrm.png" alt="公司" class="tinyELogo"/>
-                    </a>
-
-                    <div class="job-detail">
-                        <p class="job-title">
-                            <a href="javascript:;">PHP工程师</a>
-                        </p>
-
-                        <p class="job-salary">
-                            <em>
-                                18-30万
-                                <span>上海-徐汇区</span>
-                            </em>
-                        </p>
-
-                        <p class="company-name">
-                            <a href="javascript:;">齐数科技（上海）有限公司</a>
-                        </p>
-                    </div>
-                </li>
-                <li class="clearfix">
-                    <a href="javascript:;" class="company-logo">
-                        <img src="img/etocrm.png" alt="公司" class="tinyELogo"/>
-                    </a>
-
-                    <div class="job-detail">
-                        <p class="job-title">
-                            <a href="javascript:;">PHP工程师</a>
-                        </p>
-
-                        <p class="job-salary">
-                            <em>
-                                18-30万
-                                <span>上海-徐汇区</span>
-                            </em>
-                        </p>
-
-                        <p class="company-name">
-                            <a href="javascript:;">齐数科技（上海）有限公司</a>
-                        </p>
-                    </div>
-                </li>
-                <li class="clearfix">
-                    <a href="javascript:;" class="company-logo">
-                        <img src="img/etocrm.png" alt="公司" class="tinyELogo"/>
-                    </a>
-
-                    <div class="job-detail">
-                        <p class="job-title">
-                            <a href="javascript:;">PHP工程师</a>
-                        </p>
-
-                        <p class="job-salary">
-                            <em>
-                                18-30万
-                                <span>上海-徐汇区</span>
-                            </em>
-                        </p>
-
-                        <p class="company-name">
-                            <a href="javascript:;">齐数科技（上海）有限公司</a>
-                        </p>
-                    </div>
-                </li>
-                <li class="clearfix">
-                    <a href="javascript:;" class="company-logo">
-                        <img src="img/etocrm.png" alt="公司" class="tinyELogo"/>
-                    </a>
-
-                    <div class="job-detail">
-                        <p class="job-title">
-                            <a href="javascript:;">PHP工程师</a>
-                        </p>
-
-                        <p class="job-salary">
-                            <em>
-                                18-30万
-                                <span>上海-徐汇区</span>
-                            </em>
-                        </p>
-
-                        <p class="company-name">
-                            <a href="javascript:;">齐数科技（上海）有限公司</a>
-                        </p>
-                    </div>
-                </li>
-                <li class="clearfix">
-                    <a href="javascript:;" class="company-logo">
-                        <img src="img/etocrm.png" alt="公司" class="tinyELogo"/>
-                    </a>
-
-                    <div class="job-detail">
-                        <p class="job-title">
-                            <a href="javascript:;">PHP工程师</a>
-                        </p>
-
-                        <p class="job-salary">
-                            <em>
-                                18-30万
-                                <span>上海-徐汇区</span>
-                            </em>
-                        </p>
-
-                        <p class="company-name">
-                            <a href="javascript:;">齐数科技（上海）有限公司</a>
-                        </p>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <div class="hangye_car">
-            <div class="left-part">
-                <h3>
-                    <a href="javascript:;">
-                        <span class="icons24"></span>
-                        IT·互联网</a>
-                </h3>
-
-                <div class="job">
-                    <a href="javascript:;">Java</a>
-                    <a href="javascript:;">产品经理</a>
-                    <a href="javascript:;">Python</a>
-                    <a href="javascript:;">iOS</a>
-                    <a href="javascript:;">PHP</a>
-                    <a href="javascript:;">Android</a>
-                    <a href="javascript:;">UI设计师</a>
-                    <a href="javascript:;">Html5</a>
-                </div>
-                <div class="companies">
-                    <a href="javascript:;">乐视</a>
-                    <a href="javascript:;">努比亚</a>
-                    <a href="javascript:;">易迅电商</a>
-                    <a href="javascript:;">小米</a>
-                    <a href="javascript:;">招商银行</a>
-                    <a href="javascript:;">迅雷</a>
-                </div>
-                <a href="http://www.liepin.com/it/" class="btn-enter">进入IT 互联网分站</a>
-            </div>
-            <ul class="right-part">
-                <li class="clearfix">
-                    <a href="javascript:;" class="company-logo">
-                        <img src="img/etocrm.png" alt="公司" class="tinyELogo"/></a>
-                    <div class="job-detail">
-                        <p class="job-title">
-                            <a href="javascript:;">PHP工程师</a>
-                        </p>
-
-                        <p class="job-salary">
-                            <em>
-                                18-30万
-                                <span>上海-徐汇区</span>
-                            </em>
-                        </p>
-
-                        <p class="company-name">
-                            <a href="javascript:;">齐数科技（上海）有限公司</a>
-                        </p>
-                    </div>
-                </li>
-                <li class="clearfix">
-                    <a href="javascript:;" class="company-logo">
-                        <img src="img/etocrm.png" alt="公司" class="tinyELogo"/>
-                    </a>
-
-                    <div class="job-detail">
-                        <p class="job-title">
-                            <a href="javascript:;">PHP工程师</a>
-                        </p>
-
-                        <p class="job-salary">
-                            <em>
-                                18-30万
-                                <span>上海-徐汇区</span>
-                            </em>
-                        </p>
-
-                        <p class="company-name">
-                            <a href="javascript:;">齐数科技（上海）有限公司</a>
-                        </p>
-                    </div>
-                </li>
-                <li class="clearfix">
-                    <a href="javascript:;" class="company-logo">
-                        <img src="img/etocrm.png" alt="公司" class="tinyELogo"/>
-                    </a>
-
-                    <div class="job-detail">
-                        <p class="job-title">
-                            <a href="javascript:;">PHP工程师</a>
-                        </p>
-
-                        <p class="job-salary">
-                            <em>
-                                18-30万
-                                <span>上海-徐汇区</span>
-                            </em>
-                        </p>
-
-                        <p class="company-name">
-                            <a href="javascript:;">齐数科技（上海）有限公司</a>
-                        </p>
-                    </div>
-                </li>
-                <li class="clearfix">
-                    <a href="javascript:;" class="company-logo">
-                        <img src="img/etocrm.png" alt="公司" class="tinyELogo"/>
-                    </a>
-
-                    <div class="job-detail">
-                        <p class="job-title">
-                            <a href="javascript:;">PHP工程师</a>
-                        </p>
-
-                        <p class="job-salary">
-                            <em>
-                                18-30万
-                                <span>上海-徐汇区</span>
-                            </em>
-                        </p>
-
-                        <p class="company-name">
-                            <a href="javascript:;">齐数科技（上海）有限公司</a>
-                        </p>
-                    </div>
-                </li>
-                <li class="clearfix">
-                    <a href="javascript:;" class="company-logo">
-                        <img src="img/etocrm.png" alt="公司" class="tinyELogo"/>
-                    </a>
-
-                    <div class="job-detail">
-                        <p class="job-title">
-                            <a href="javascript:;">PHP工程师</a>
-                        </p>
-
-                        <p class="job-salary">
-                            <em>
-                                18-30万
-                                <span>上海-徐汇区</span>
-                            </em>
-                        </p>
-
-                        <p class="company-name">
-                            <a href="javascript:;">齐数科技（上海）有限公司</a>
-                        </p>
-                    </div>
-                </li>
-                <li class="clearfix">
-                    <a href="javascript:;" class="company-logo">
-                        <img src="img/etocrm.png" alt="公司" class="tinyELogo"/>
-                    </a>
-
-                    <div class="job-detail">
-                        <p class="job-title">
-                            <a href="javascript:;">PHP工程师</a>
-                        </p>
-
-                        <p class="job-salary">
-                            <em>
-                                18-30万
-                                <span>上海-徐汇区</span>
-                            </em>
-                        </p>
-
-                        <p class="company-name">
-                            <a href="javascript:;">齐数科技（上海）有限公司</a>
-                        </p>
-                    </div>
-                </li>
-                <li class="clearfix">
-                    <a href="javascript:;" class="company-logo">
-                        <img src="img/etocrm.png" alt="公司" class="tinyELogo"/>
-                    </a>
-
-                    <div class="job-detail">
-                        <p class="job-title">
-                            <a href="javascript:;">PHP工程师</a>
-                        </p>
-
-                        <p class="job-salary">
-                            <em>
-                                18-30万
-                                <span>上海-徐汇区</span>
-                            </em>
-                        </p>
-
-                        <p class="company-name">
-                            <a href="javascript:;">齐数科技（上海）有限公司</a>
-                        </p>
-                    </div>
-                </li>
-                <li class="clearfix">
-                    <a href="javascript:;" class="company-logo">
-                        <img src="img/etocrm.png" alt="公司" class="tinyELogo"/>
-                    </a>
-
-                    <div class="job-detail">
-                        <p class="job-title">
-                            <a href="javascript:;">PHP工程师</a>
-                        </p>
-
-                        <p class="job-salary">
-                            <em>
-                                18-30万
-                                <span>上海-徐汇区</span>
-                            </em>
-                        </p>
-
-                        <p class="company-name">
-                            <a href="javascript:;">齐数科技（上海）有限公司</a>
-                        </p>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <div class="hangye_medicare">
-            <div class="left-part">
-                <h3>
-                    <a href="javascript:;">
-                        <span class="icons24"></span>
-                        IT·互联网</a>
-                </h3>
-
-                <div class="job">
-                    <a href="javascript:;">Java</a>
-                    <a href="javascript:;">产品经理</a>
-                    <a href="javascript:;">Python</a>
-                    <a href="javascript:;">iOS</a>
-                    <a href="javascript:;">PHP</a>
-                    <a href="javascript:;">Android</a>
-                    <a href="javascript:;">UI设计师</a>
-                    <a href="javascript:;">Html5</a>
-                </div>
-                <div class="companies">
-                    <a href="javascript:;">乐视</a>
-                    <a href="javascript:;">努比亚</a>
-                    <a href="javascript:;">易迅电商</a>
-                    <a href="javascript:;">小米</a>
-                    <a href="javascript:;">招商银行</a>
-                    <a href="javascript:;">迅雷</a>
-                </div>
-                <a href="http://www.liepin.com/it/" class="btn-enter">进入IT 互联网分站</a>
-            </div>
-            <ul class="right-part">
-                <li class="clearfix">
-                    <a href="javascript:;" class="company-logo">
-                        <img src="img/etocrm.png" alt="公司" class="tinyELogo"/></a>
-                    <div class="job-detail">
-                        <p class="job-title">
-                            <a href="javascript:;">PHP工程师</a>
-                        </p>
-
-                        <p class="job-salary">
-                            <em>
-                                18-30万
-                                <span>上海-徐汇区</span>
-                            </em>
-                        </p>
-
-                        <p class="company-name">
-                            <a href="javascript:;">齐数科技（上海）有限公司</a>
-                        </p>
-                    </div>
-                </li>
-                <li class="clearfix">
-                    <a href="javascript:;" class="company-logo">
-                        <img src="img/etocrm.png" alt="公司" class="tinyELogo"/>
-                    </a>
-
-                    <div class="job-detail">
-                        <p class="job-title">
-                            <a href="javascript:;">PHP工程师</a>
-                        </p>
-
-                        <p class="job-salary">
-                            <em>
-                                18-30万
-                                <span>上海-徐汇区</span>
-                            </em>
-                        </p>
-
-                        <p class="company-name">
-                            <a href="javascript:;">齐数科技（上海）有限公司</a>
-                        </p>
-                    </div>
-                </li>
-                <li class="clearfix">
-                    <a href="javascript:;" class="company-logo">
-                        <img src="img/etocrm.png" alt="公司" class="tinyELogo"/>
-                    </a>
-
-                    <div class="job-detail">
-                        <p class="job-title">
-                            <a href="javascript:;">PHP工程师</a>
-                        </p>
-
-                        <p class="job-salary">
-                            <em>
-                                18-30万
-                                <span>上海-徐汇区</span>
-                            </em>
-                        </p>
-
-                        <p class="company-name">
-                            <a href="javascript:;">齐数科技（上海）有限公司</a>
-                        </p>
-                    </div>
-                </li>
-                <li class="clearfix">
-                    <a href="javascript:;" class="company-logo">
-                        <img src="img/etocrm.png" alt="公司" class="tinyELogo"/>
-                    </a>
-
-                    <div class="job-detail">
-                        <p class="job-title">
-                            <a href="javascript:;">PHP工程师</a>
-                        </p>
-
-                        <p class="job-salary">
-                            <em>
-                                18-30万
-                                <span>上海-徐汇区</span>
-                            </em>
-                        </p>
-
-                        <p class="company-name">
-                            <a href="javascript:;">齐数科技（上海）有限公司</a>
-                        </p>
-                    </div>
-                </li>
-                <li class="clearfix">
-                    <a href="javascript:;" class="company-logo">
-                        <img src="img/etocrm.png" alt="公司" class="tinyELogo"/>
-                    </a>
-
-                    <div class="job-detail">
-                        <p class="job-title">
-                            <a href="javascript:;">PHP工程师</a>
-                        </p>
-
-                        <p class="job-salary">
-                            <em>
-                                18-30万
-                                <span>上海-徐汇区</span>
-                            </em>
-                        </p>
-
-                        <p class="company-name">
-                            <a href="javascript:;">齐数科技（上海）有限公司</a>
-                        </p>
-                    </div>
-                </li>
-                <li class="clearfix">
-                    <a href="javascript:;" class="company-logo">
-                        <img src="img/etocrm.png" alt="公司" class="tinyELogo"/>
-                    </a>
-
-                    <div class="job-detail">
-                        <p class="job-title">
-                            <a href="javascript:;">PHP工程师</a>
-                        </p>
-
-                        <p class="job-salary">
-                            <em>
-                                18-30万
-                                <span>上海-徐汇区</span>
-                            </em>
-                        </p>
-
-                        <p class="company-name">
-                            <a href="javascript:;">齐数科技（上海）有限公司</a>
-                        </p>
-                    </div>
-                </li>
-                <li class="clearfix">
-                    <a href="javascript:;" class="company-logo">
-                        <img src="img/etocrm.png" alt="公司" class="tinyELogo"/>
-                    </a>
-
-                    <div class="job-detail">
-                        <p class="job-title">
-                            <a href="javascript:;">PHP工程师</a>
-                        </p>
-
-                        <p class="job-salary">
-                            <em>
-                                18-30万
-                                <span>上海-徐汇区</span>
-                            </em>
-                        </p>
-
-                        <p class="company-name">
-                            <a href="javascript:;">齐数科技（上海）有限公司</a>
-                        </p>
-                    </div>
-                </li>
-                <li class="clearfix">
-                    <a href="javascript:;" class="company-logo">
-                        <img src="img/etocrm.png" alt="公司" class="tinyELogo"/>
-                    </a>
-
-                    <div class="job-detail">
-                        <p class="job-title">
-                            <a href="javascript:;">PHP工程师</a>
-                        </p>
-
-                        <p class="job-salary">
-                            <em>
-                                18-30万
-                                <span>上海-徐汇区</span>
-                            </em>
-                        </p>
-
-                        <p class="company-name">
-                            <a href="javascript:;">齐数科技（上海）有限公司</a>
-                        </p>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <div class="seo-after">
-            <div class="seo-before">
-                <h3 class="hot-title">
-                    <span>热门职位</span>
-                    <span>名企职位</span>
-                </h3>
-                <div class="job-box">
-                    <ul class="hot-job">
-                        <li>
-                            <a  class="indus-title" href="javascript:;">IT/互联网/通信/电子</a>
-                            <div class="sub-nav">
-                                <dl>
-                                    <dt>
-                                        <a href="javascript:;">后端开发</a>
-                                    </dt>
-                                    <dd>
-                                        <a href="javascript:;">高级软件工程师</a>
-                                        <a href="javascript:;">软件工程师</a>
-                                        <a href="javascript:;">架构师</a>
-                                        <a href="javascript:;">高级软件工程师</a>
-                                        <a href="javascript:;">系统分析师</a>
-                                        <a href="javascript:;">需求分析师</a>
-                                        <a href="javascript:;">数据库开发工程师</a>
-                                    </dd>
-                                </dl>
-                            </div>
-                        </li>
-                        <li>
-                            <a  class="indus-title" href="javascript:;">金融/会计/银行/保险</a>
-                            <div class="sub-nav">
-                                <dl>
-                                    <dt>
-                                        <a href="javascript:;">后端开发</a>
-                                    </dt>
-                                    <dd>
-                                        <a href="javascript:;">高级软件工程师</a>
-                                        <a href="javascript:;">软件工程师</a>
-                                        <a href="javascript:;">架构师</a>
-                                        <a href="javascript:;">高级软件工程师</a>
-                                        <a href="javascript:;">系统分析师</a>
-                                        <a href="javascript:;">需求分析师</a>
-                                        <a href="javascript:;">数据库开发工程师</a>
-                                    </dd>
-                                </dl>
-                            </div>
-                        </li>
-                        <li>
-                            <a  class="indus-title" href="javascript:;">房地产/建筑业</a>
-                            <div class="sub-nav">
-                                <dl>
-                                    <dt>
-                                        <a href="javascript:;">后端开发</a>
-                                    </dt>
-                                    <dd>
-                                        <a href="javascript:;">高级软件工程师</a>
-                                        <a href="javascript:;">软件工程师</a>
-                                        <a href="javascript:;">架构师</a>
-                                        <a href="javascript:;">高级软件工程师</a>
-                                        <a href="javascript:;">系统分析师</a>
-                                        <a href="javascript:;">需求分析师</a>
-                                        <a href="javascript:;">数据库开发工程师</a>
-                                    </dd>
-                                </dl>
-                            </div>
-                        </li>
-                        <li>
-                            <a  class="indus-title" href="javascript:;">商业服务</a>
-                            <div class="sub-nav">
-                                <dl>
-                                    <dt>
-                                        <a href="javascript:;">后端开发</a>
-                                    </dt>
-                                    <dd>
-                                        <a href="javascript:;">高级软件工程师</a>
-                                        <a href="javascript:;">软件工程师</a>
-                                        <a href="javascript:;">架构师</a>
-                                        <a href="javascript:;">高级软件工程师</a>
-                                        <a href="javascript:;">系统分析师</a>
-                                        <a href="javascript:;">需求分析师</a>
-                                        <a href="javascript:;">数据库开发工程师</a>
-                                    </dd>
-                                </dl>
-                            </div>
-                        </li>
-                        <li>
-                            <a  class="indus-title" href="javascript:;">教育/培训</a>
-                            <div class="sub-nav">
-                                <dl>
-                                    <dt>
-                                        <a href="javascript:;">后端开发</a>
-                                    </dt>
-                                    <dd>
-                                        <a href="javascript:;">高级软件工程师</a>
-                                        <a href="javascript:;">软件工程师</a>
-                                        <a href="javascript:;">架构师</a>
-                                        <a href="javascript:;">高级软件工程师</a>
-                                        <a href="javascript:;">系统分析师</a>
-                                        <a href="javascript:;">需求分析师</a>
-                                        <a href="javascript:;">数据库开发工程师</a>
-                                    </dd>
-                                </dl>
-                            </div>
-                        </li>
-                        <li>
-                            <a  class="indus-title" href="javascript:;">广告/媒体</a>
-                            <div class="sub-nav">
-                                <dl>
-                                    <dt>
-                                        <a href="javascript:;">后端开发</a>
-                                    </dt>
-                                    <dd>
-                                        <a href="javascript:;">高级软件工程师</a>
-                                        <a href="javascript:;">软件工程师</a>
-                                        <a href="javascript:;">架构师</a>
-                                        <a href="javascript:;">高级软件工程师</a>
-                                        <a href="javascript:;">系统分析师</a>
-                                        <a href="javascript:;">需求分析师</a>
-                                        <a href="javascript:;">数据库开发工程师</a>
-                                    </dd>
-                                </dl>
-                            </div>
-                        </li>
-                        <li>
-                            <a  class="indus-title" href="javascript:;">消费品/贸易/批发/零售</a>
-                            <div class="sub-nav">
-                                <dl>
-                                    <dt>
-                                        <a href="javascript:;">后端开发</a>
-                                    </dt>
-                                    <dd>
-                                        <a href="javascript:;">高级软件工程师</a>
-                                        <a href="javascript:;">软件工程师</a>
-                                        <a href="javascript:;">架构师</a>
-                                        <a href="javascript:;">高级软件工程师</a>
-                                        <a href="javascript:;">系统分析师</a>
-                                        <a href="javascript:;">需求分析师</a>
-                                        <a href="javascript:;">数据库开发工程师</a>
-                                    </dd>
-                                </dl>
-                            </div>
-                        </li>
-                        <li>
-                            <a  class="indus-title" href="javascript:;">加工制造/仪表设备</a>
-                            <div class="sub-nav">
-                                <dl>
-                                    <dt>
-                                        <a href="javascript:;">后端开发</a>
-                                    </dt>
-                                    <dd>
-                                        <a href="javascript:;">高级软件工程师</a>
-                                        <a href="javascript:;">软件工程师</a>
-                                        <a href="javascript:;">架构师</a>
-                                        <a href="javascript:;">高级软件工程师</a>
-                                        <a href="javascript:;">系统分析师</a>
-                                        <a href="javascript:;">需求分析师</a>
-                                        <a href="javascript:;">数据库开发工程师</a>
-                                    </dd>
-                                </dl>
-                            </div>
-                        </li>
-                        <li>
-                            <a  class="indus-title" href="javascript:;">交通/物流/运输</a>
-                            <div class="sub-nav">
-                                <dl>
-                                    <dt>
-                                        <a href="javascript:;">后端开发</a>
-                                    </dt>
-                                    <dd>
-                                        <a href="javascript:;">高级软件工程师</a>
-                                        <a href="javascript:;">软件工程师</a>
-                                        <a href="javascript:;">架构师</a>
-                                        <a href="javascript:;">高级软件工程师</a>
-                                        <a href="javascript:;">系统分析师</a>
-                                        <a href="javascript:;">需求分析师</a>
-                                        <a href="javascript:;">数据库开发工程师</a>
-                                    </dd>
-                                </dl>
-                            </div>
-                        </li>
-                        <li>
-                            <a  class="indus-title" href="javascript:;">医药/医疗</a>
-                            <div class="sub-nav">
-                                <dl>
-                                    <dt>
-                                        <a href="javascript:;">后端开发</a>
-                                    </dt>
-                                    <dd>
-                                        <a href="javascript:;">高级软件工程师</a>
-                                        <a href="javascript:;">软件工程师</a>
-                                        <a href="javascript:;">架构师</a>
-                                        <a href="javascript:;">高级软件工程师</a>
-                                        <a href="javascript:;">系统分析师</a>
-                                        <a href="javascript:;">需求分析师</a>
-                                        <a href="javascript:;">数据库开发工程师</a>
-                                    </dd>
-                                </dl>
-                            </div>
-                        </li>
-                        <li>
-                            <a  class="indus-title" href="javascript:;">服务业</a>
-                            <div class="sub-nav">
-                                <dl>
-                                    <dt>
-                                        <a href="javascript:;">后端开发</a>
-                                    </dt>
-                                    <dd>
-                                        <a href="javascript:;">高级软件工程师</a>
-                                        <a href="javascript:;">软件工程师</a>
-                                        <a href="javascript:;">架构师</a>
-                                        <a href="javascript:;">高级软件工程师</a>
-                                        <a href="javascript:;">系统分析师</a>
-                                        <a href="javascript:;">需求分析师</a>
-                                        <a href="javascript:;">数据库开发工程师</a>
-                                    </dd>
-                                </dl>
-                            </div>
-                        </li>
-                        <li>
-                            <a  class="indus-title" href="javascript:;">能源/采掘/化工/环保</a>
-                            <div class="sub-nav">
-                                <dl>
-                                    <dt>
-                                        <a href="javascript:;">后端开发</a>
-                                    </dt>
-                                    <dd>
-                                        <a href="javascript:;">高级软件工程师</a>
-                                        <a href="javascript:;">软件工程师</a>
-                                        <a href="javascript:;">架构师</a>
-                                        <a href="javascript:;">高级软件工程师</a>
-                                        <a href="javascript:;">系统分析师</a>
-                                        <a href="javascript:;">需求分析师</a>
-                                        <a href="javascript:;">数据库开发工程师</a>
-                                    </dd>
-                                </dl>
-                            </div>
-                        </li>
-                        <li>
-                            <a  class="indus-title" href="javascript:;">政府/农林牧渔/其他</a>
-                            <div class="sub-nav">
-                                <dl>
-                                    <dt>
-                                        <a href="javascript:;">后端开发</a>
-                                    </dt>
-                                    <dd>
-                                        <a href="javascript:;">高级软件工程师</a>
-                                        <a href="javascript:;">软件工程师</a>
-                                        <a href="javascript:;">架构师</a>
-                                        <a href="javascript:;">高级软件工程师</a>
-                                        <a href="javascript:;">系统分析师</a>
-                                        <a href="javascript:;">需求分析师</a>
-                                        <a href="javascript:;">数据库开发工程师</a>
-                                    </dd>
-                                </dl>
-                            </div>
-                        </li>
-                        <li>
-                            <a  class="indus-title" href="javascript:;">职能类</a>
-                            <div class="sub-nav">
-                                <dl>
-                                    <dt>
-                                        <a href="javascript:;">后端开发</a>
-                                    </dt>
-                                    <dd>
-                                        <a href="javascript:;">高级软件工程师</a>
-                                        <a href="javascript:;">软件工程师</a>
-                                        <a href="javascript:;">架构师</a>
-                                        <a href="javascript:;">高级软件工程师</a>
-                                        <a href="javascript:;">系统分析师</a>
-                                        <a href="javascript:;">需求分析师</a>
-                                        <a href="javascript:;">数据库开发工程师</a>
-                                    </dd>
-                                </dl>
-                            </div>
-                        </li>
-
-                    </ul>
-                    <ul class="company-jobs">
-                        <li>
-                            <a href="javascript:;" class="famous-logo">
-                                <img src="img/nanfu.png" alt="" class="normalELogo"/>
-                            </a>
-                            <p class="job-name">
-                                <a href="javascript:;" title="产品经理（移动电源）">
-                                    <span>产品经理（移动电源）</span>
-                                    <em>上海</em>
-                                </a>
-                            </p>
-                            <p class="job-name">
-                                <a href="javascript:;" title="产品经理（充电电池）">
-                                    <span>产品经理（充电电池）</span>
-                                    <em>深圳</em>
-                                </a>
-                            </p>
-                        </li>
-                        <li>
-                            <a href="javascript:;" class="famous-logo">
-                                <img src="img/nanfu.png" alt="" class="normalELogo"/>
-                            </a>
-                            <p class="job-name">
-                                <a href="javascript:;" title="产品经理（移动电源）">
-                                    <span>产品经理（移动电源）</span>
-                                    <em>上海</em>
-                                </a>
-                            </p>
-                            <p class="job-name">
-                                <a href="javascript:;" title="产品经理（充电电池）">
-                                    <span>产品经理（充电电池）</span>
-                                    <em>深圳</em>
-                                </a>
-                            </p>
-                        </li>
-                        <li>
-                            <a href="javascript:;" class="famous-logo">
-                                <img src="img/nanfu.png" alt="" class="normalELogo"/>
-                            </a>
-                            <p class="job-name">
-                                <a href="javascript:;" title="产品经理（移动电源）">
-                                    <span>产品经理（移动电源）</span>
-                                    <em>上海</em>
-                                </a>
-                            </p>
-                            <p class="job-name">
-                                <a href="javascript:;" title="产品经理（充电电池）">
-                                    <span>产品经理（充电电池）</span>
-                                    <em>深圳</em>
-                                </a>
-                            </p>
-                        </li>
-                        <li>
-                            <a href="javascript:;" class="famous-logo">
-                                <img src="img/nanfu.png" alt="" class="normalELogo"/>
-                            </a>
-                            <p class="job-name">
-                                <a href="javascript:;" title="产品经理（移动电源）">
-                                    <span>产品经理（移动电源）</span>
-                                    <em>上海</em>
-                                </a>
-                            </p>
-                            <p class="job-name">
-                                <a href="javascript:;" title="产品经理（充电电池）">
-                                    <span>产品经理（充电电池）</span>
-                                    <em>深圳</em>
-                                </a>
-                            </p>
-                        </li>
-                        <li>
-                            <a href="javascript:;" class="famous-logo">
-                                <img src="img/nanfu.png" alt="" class="normalELogo"/>
-                            </a>
-                            <p class="job-name">
-                                <a href="javascript:;" title="产品经理（移动电源）">
-                                    <span>产品经理（移动电源）</span>
-                                    <em>上海</em>
-                                </a>
-                            </p>
-                            <p class="job-name">
-                                <a href="javascript:;" title="产品经理（充电电池）">
-                                    <span>产品经理（充电电池）</span>
-                                    <em>深圳</em>
-                                </a>
-                            </p>
-                        </li>
-                        <li>
-                            <a href="javascript:;" class="famous-logo">
-                                <img src="img/nanfu.png" alt="" class="normalELogo"/>
-                            </a>
-                            <p class="job-name">
-                                <a href="javascript:;" title="产品经理（移动电源）">
-                                    <span>产品经理（移动电源）</span>
-                                    <em>上海</em>
-                                </a>
-                            </p>
-                            <p class="job-name">
-                                <a href="javascript:;" title="产品经理（充电电池）">
-                                    <span>产品经理（充电电池）</span>
-                                    <em>深圳</em>
-                                </a>
-                            </p>
-                        </li>
-                        <li>
-                            <a href="javascript:;" class="famous-logo">
-                                <img src="img/nanfu.png" alt="" class="normalELogo"/>
-                            </a>
-                            <p class="job-name">
-                                <a href="javascript:;" title="产品经理（移动电源）">
-                                    <span>产品经理（移动电源）</span>
-                                    <em>上海</em>
-                                </a>
-                            </p>
-                            <p class="job-name">
-                                <a href="javascript:;" title="产品经理（充电电池）">
-                                    <span>产品经理（充电电池）</span>
-                                    <em>深圳</em>
-                                </a>
-                            </p>
-                        </li>
-                        <li>
-                            <a href="javascript:;" class="famous-logo">
-                                <img src="img/nanfu.png" alt="" class="normalELogo"/>
-                            </a>
-                            <p class="job-name">
-                                <a href="javascript:;" title="产品经理（移动电源）">
-                                    <span>产品经理（移动电源）</span>
-                                    <em>上海</em>
-                                </a>
-                            </p>
-                            <p class="job-name">
-                                <a href="javascript:;" title="产品经理（充电电池）">
-                                    <span>产品经理（充电电池）</span>
-                                    <em>深圳</em>
-                                </a>
-                            </p>
-                        </li>
-                        <li>
-                            <a href="javascript:;" class="famous-logo">
-                                <img src="img/nanfu.png" alt="" class="normalELogo"/>
-                            </a>
-                            <p class="job-name">
-                                <a href="javascript:;" title="产品经理（移动电源）">
-                                    <span>产品经理（移动电源）</span>
-                                    <em>上海</em>
-                                </a>
-                            </p>
-                            <p class="job-name">
-                                <a href="javascript:;" title="产品经理（充电电池）">
-                                    <span>产品经理（充电电池）</span>
-                                    <em>深圳</em>
-                                </a>
-                            </p>
-                        </li>
-                    </ul>
-                </div>
+<div class="product1">
+    <div class="pleft"><img src="img/sct1.png"> <img src="img/sct11.png"></div>
+    <div class="pcenter">
+        <div class="pwenzi">
+            <img src="img/sctu15.png"></p>
+            <div class="pphoto">
+                <p><a>模型公仔</a><a>仿真收藏</a></p>
+
+                <p><a>变形金刚</a><a>毛绒玩具</a></p>
+
+                <p><a>角色扮演</a><a>益智拼插</a></p>
+
+                <p style="margin-top: 20px; text-align: left; background-color: white; width: 70px; text-align: center; border-radius: 10px; color: #fa881e;margin-left: 25px; cursor: pointer">
+                    查看更多</p>
             </div>
         </div>
-    </div>
-
-    <!--其他-->
-    <div class="other">
-        <div class="links">
-            <p class="links-wrap">
-                <span class="links-title">热门城市</span>
-                <span class="links-content">
-                     <a href="javascript:;">北京招聘</a>
-                     <a href="javascript:;">上海招聘</a>
-                     <a href="javascript:;">广州招聘</a>
-                     <a href="javascript:;">深圳招聘</a>
-                     <a href="javascript:;">南京招聘</a>
-                     <a href="javascript:;">杭州招聘</a>
-                </span>
-            </p>
-            <p class="links-wrap">
-                <span class="links-title">热门职位</span>
-                <span class="links-content">
-                     <a href="javascript:;">翻译招聘</a>
-                     <a href="javascript:;">保险招聘</a>
-                     <a href="javascript:;">销售招聘</a>
-                           <a href="javascript:;">翻译招聘</a>
-                     <a href="javascript:;">保险招聘</a>
-                     <a href="javascript:;">销售招聘</a>
-                           <a href="javascript:;">翻译招聘</a>
-                     <a href="javascript:;">保险招聘</a>
-                     <a href="javascript:;">销售招聘</a>
-                           <a href="javascript:;">翻译招聘</a>
-                     <a href="javascript:;">保险招聘</a>
-                     <a href="javascript:;">销售招聘</a>
-                           <a href="javascript:;">翻译招聘</a>
-                     <a href="javascript:;">保险招聘</a>
-                     <a href="javascript:;">销售招聘</a>
-                </span>
-            </p>
-            <p class="links-wrap">
-                <span class="links-title">常用链接</span>
-                <span class="links-content">
-                     <a href="javascript:;">公司招聘</a>
-                     <a href="javascript:;">找工作</a>
-                     <a href="javascript:;">岗位职责</a>
-                </span>
-            </p>
-            <p class="links-wrap">
-                <span class="links-title">友情链接</span>
-                <span class="links-content">
-                     <a href="javascript:;">新疆人才网</a>
-                     <a href="javascript:;">中国医疗人才网</a>
-                     <a href="javascript:;">教师招聘</a>
-                     <a href="javascript:;">新疆人才网</a>
-                     <a href="javascript:;">中国医疗人才网</a>
-                     <a href="javascript:;">教师招聘</a>
-                     <a href="javascript:;">新疆人才网</a>
-                     <a href="javascript:;">中国医疗人才网</a>
-                     <a href="javascript:;">教师招聘</a>
-                     <a href="javascript:;">新疆人才网</a>
-                     <a href="javascript:;">中国医疗人才网</a>
-                     <a href="javascript:;">教师招聘</a>
-                      <a href="javascript:;">新疆人才网</a>
-                     <a href="javascript:;">中国医疗人才网</a>
-                     <a href="javascript:;">教师招聘</a>
-                </span>
-            </p>
-
-
-
-        </div>
-    </div>
-
-    <!--底部-->
-    <footer class="footer-p">
-        <hr>
-        <div class="wrap">
-            <div class="copyright">
-                <div class="copy-side">
-                    服务热线（免长话费）
-                </div>
-                <!--<br>-->
-                <!--<strong>400-6838-789</strong>-->
-                <!--<br>-->
-                <!--<small>工作日 9:00-19:00</small>-->
-                <div class="copy-main">
-                    <div class="item">
-                        <dl>
-                            <dt>简介</dt>
-                            <dd>
-                                <a href="javascript:;">猎聘网简介</a>
-                            </dd>
-                            <dd>
-                                <a href="javascript:;">产品服务</a>
-                            </dd>
-                            <dd>
-                                <a href="javascript:;">创新优势</a>
-                            </dd>
-                            <dd>
-                                <a href="javascript:;">友情链接</a>
-                            </dd>
-                            <dd>
-                                <a href="javascript:;">联系我们</a>
-                            </dd>
-                        </dl>
-                    </div>
-                    <div class="item">
-                        <dl>
-                            <dt>简介</dt>
-                            <dd>
-                                <a href="javascript:;">猎聘网简介</a>
-                            </dd>
-                            <dd>
-                                <a href="javascript:;">产品服务</a>
-                            </dd>
-                            <dd>
-                                <a href="javascript:;">创新优势</a>
-                            </dd>
-                            <dd>
-                                <a href="javascript:;">友情链接</a>
-                            </dd>
-                            <dd>
-                                <a href="javascript:;">联系我们</a>
-                            </dd>
-                        </dl>
-                    </div>
-                    <div class="item">
-                        <dl>
-                            <dt>简介</dt>
-                            <dd>
-                                <a href="javascript:;">猎聘网简介</a>
-                            </dd>
-                            <dd>
-                                <a href="javascript:;">产品服务</a>
-                            </dd>
-                            <dd>
-                                <a href="javascript:;">创新优势</a>
-                            </dd>
-                            <dd>
-                                <a href="javascript:;">友情链接</a>
-                            </dd>
-                            <dd>
-                                <a href="javascript:;">联系我们</a>
-                            </dd>
-                        </dl>
-                    </div>
-                    <div class="item">
-                        <dl>
-                            <dt>简介</dt>
-                            <dd>
-                                <a href="javascript:;">猎聘网简介</a>
-                            </dd>
-                            <dd>
-                                <a href="javascript:;">产品服务</a>
-                            </dd>
-                            <dd>
-                                <a href="javascript:;">创新优势</a>
-                            </dd>
-                            <dd>
-                                <a href="javascript:;">友情链接</a>
-                            </dd>
-                            <dd>
-                                <a href="javascript:;">联系我们</a>
-                            </dd>
-                        </dl>
-                    </div>
-                    <div class="item-weibo">
-                        <a href="javascript:;">
-                            <i class="weibo"></i>
-                        </a>
-                        <p>猎聘微博</p>
-                        <a href="javascript:;" class="btn-sina"></a>
-                    </div>
-                    <div class="item-apps">
-                        <i class="mishu"></i>
-                        <p>猎聘同道APP</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="copy-footer">
-            <p>京ICP备09083200号 京ICP证070419号 人才服务许可证:RC0710280 京公网安备:11010502026763</p>
-            <p>Copyright©2000-2016 liepin.com All Rights Reserved</p>
-        </div>
-    </footer>
-
+        <img src="img/sctu14.png"></div>
+    <div class="pright"><img src="img/sct12.png"> <img src="img/sctu13.png"></div>
 </div>
+<div class="bnn">
+    <img src="img/scb1.jpg">
+    <img src="img/scbb.png">
+</div>
+<div class="bnnn">
+    <img src="img/bb1.png">
+    <img src="img/bb2.png">
+    <img src="img/bb3.png">
+</div>
+<div class="product1">
+    <div class="pleft"><img src="img/sct2.png"> <img src="img/sct21.png"></div>
+    <div class="pcenter">
+        <div class="pwenzi" style="background-color: #2378b9">
+            <img src="img/sct25.png"></p>
+            <div class="pphoto">
+                <p><a>模型公仔</a><a>仿真收藏</a></p>
 
+                <p><a>变形金刚</a><a>毛绒玩具</a></p>
 
+                <p><a>角色扮演</a><a>益智拼插</a></p>
 
+                <p style="margin-top: 20px; text-align: left; background-color: white; width: 70px; text-align: center; border-radius: 10px; color: #2378b9;margin-left: 25px; cursor: pointer">
+                    查看更多</p>
+            </div>
+        </div>
+        <img src="img/sctu14.png"></div>
+    <div class="pright"><img src="img/sct2.2.png"> <img src="img/sct23.png"></div>
+</div>
+<div class="product1">
+    <div class="pleft"><img src="img/sct3.png"> <img src="img/sct3.1.png"></div>
+    <div class="pcenter">
+        <div class="pwenzi" style="background-color:#49b67c">
+            <img src="img/sct3.5.png"></p>
+            <div class="pphoto">
+                <p><a>模型公仔</a><a>仿真收藏</a></p>
 
+                <p><a>变形金刚</a><a>毛绒玩具</a></p>
 
+                <p><a>角色扮演</a><a>益智拼插</a></p>
+
+                <p style="margin-top: 20px; text-align: left; background-color: white; width: 70px; text-align: center; border-radius: 10px; color: #49b67c;margin-left: 25px; cursor: pointer">
+                    查看更多</p>
+            </div>
+        </div>
+        <img src="img/sct3.2.png"></div>
+    <div class="pright"><img src="img/sct3.4.png"> <img src="img/sct3.3.png"></div>
+</div>
+<div class="product1">
+    <div class="pleft"><img src="img/sct4.png"> <img src="img/sct4.1.png"></div>
+    <div class="pcenter">
+        <div class="pwenzi" style="background-color:#1a9ea5">
+            <img src="img/sct4.5.png"></p>
+            <div class="pphoto">
+                <p><a>模型公仔</a><a>仿真收藏</a></p>
+
+                <p><a>变形金刚</a><a>毛绒玩具</a></p>
+
+                <p><a>角色扮演</a><a>益智拼插</a></p>
+
+                <p style="margin-top: 20px; text-align: left; background-color: white; width: 70px; text-align: center; border-radius: 10px; color: #1a9ea5;margin-left: 25px; cursor: pointer">
+                    查看更多</p>
+            </div>
+        </div>
+        <img src="img/sct4.4.png"></div>
+    <div class="pright"><img src="img/sct4.2.png"> <img src="img/sct4.3.png"></div>
+</div>
+<div class="yitiaoxian"></div>
+<div class="chanp">
+    <h1>合作品牌</h1>
+
+    <div class="zhanshi">
+        <img src="img/hezuo1.jpg">
+        <img src="img/hezuo2.jpg">
+        <img src="img/hezuo3.jpg">
+        <img src="img/hezuo4.jpg">
+        <img src="img/hezuo5.jpg">
+    </div>
+</div>
+<div class="wsm">
+    <h1>为什么选择影时光</h1>
+
+    <div class="zhanshishi">
+        <div><img src="img/yuan1.png">
+
+            <p>正版授权原创设计</p>
+        </div>
+        <div><img src="img/yuan2.png">
+
+            <p>精致包装送礼佳选</p>
+        </div>
+        <div><img src="img/yuan3.png">
+
+            <p>7×13小时贴心客服</p></div>
+        <div><img src="img/yuan4.png">
+
+            <p>15天退货安心购买</p></div>
+        <div><img src="img/yuan5.png">
+
+            <p>全场满99元免运费</p></div>
+        <div><img src="img/yuan6.png">
+
+            <p>专注为爱电影的人</p></div>
+    </div>
+</div>
+<div class="gouwu">
+    <div class="di1">
+        <h1>购物指南</h1>
+
+        <P>新用户注册</P>
+
+        <P>购物流程</P>
+
+        <P>常见问题</P>
+
+        <P>发票制度</P>
+    </div>
+    <div class="di1">
+        <h1>支付方式</h1>
+
+        <P>余额付款</P>
+
+        <P>在线付款</P>
+
+        <P>礼品卡付款</P>
+
+        <P>优惠券使用</P>
+    </div>
+    <div class="di1">
+        <h1>购物指南</h1>
+
+        <P>新用户注册</P>
+
+        <P>购物流程</P>
+
+        <P>常见问题</P>
+
+        <P>发票制度</P>
+    </div>
+    <div class="di1">
+        <h1>支付方式</h1>
+
+        <P>余额付款</P>
+
+        <P>在线付款</P>
+
+        <P>礼品卡付款</P>
+
+        <P>优惠券使用</P>
+    </div>
+    <div class="di1">
+        <h1>客服电话</h1>
+
+        <P>400-818-22-41</P>
+
+        <P>周一至周日</P>
+    </div>
+</div>
+<div class="fotto">
+    <div class="fo">
+        <div class="f1" style="border-right: #e4e4e4 solid 1px;">
+            <img src="img/wei_logo.png">
+
+            <div class="leff">
+                <a>加入我们</a>
+                <a>站务论坛</a>
+                <a>社区准则</a>
+                <a>隐私政策</a>
+            </div>
+            <div class="rght">
+                <a>联系我们</a>
+                <a>问题反馈</a>
+                <a>网址地图</a>
+                <a>English</a>
+            </div>
+        </div>
+        <div class="f2" style="margin-top: 50px;margin-left: 40px">
+            <div class="leff">
+                <a>栏目</a>
+                <a>新闻</a>
+                <a>影院</a>
+                <a>商城</a>
+                <a>社区</a>
+            </div>
+            <div class="rght">
+                <a>推荐</a>
+                <a>电影热榜</a>
+                <a>时光对话</a>
+                <a>新品预告</a>
+                <a>时光周刊</a>
+            </div>
+        </div>
+        <div class="f3" style="margin-top: 35px;margin-left: 45px;">
+            <img src="img/fotto-bg.png">
+        </div>
+    </div>
+</div>
+<div class="ftto" style="clear: both;margin-top: 250px; padding-bottom: 40px">
+    <h1 style="text-align: center">北京动艺时光网络科技有限公司Copyright 2006-2016 Mtime.com Inc. All rights reserved.</h1>
+
+    <h1 style="text-align: center">京ICP证050715号 网络视听许可证0108265号网络文化经营许可证广播电视节目制作经营许可证(京)字第1435号京公网安备：110105000744号</h1>
+
+    <h1 style="margin-left: 350px; margin-top: 30px"><img src="img/denglu_cheng.png"></h1>
+</div>
+<script src="js/utils.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/tween.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/banner.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    ~function () {
+        var gwc = document.getElementById("gwc");
+        var kong = document.getElementById("kong");
+        gwc.onmouseover = function () {
+            kong.style.display = "block";
+        };
+        gwc.onmouseout = function () {
+            kong.style.display = "none";
+        };
+
+    }();
+    ~function () {
+        var xia = document.getElementById("xia");
+        var xiala = document.getElementById("xiala");
+        xia.onmouseover = function () {
+            xiala.style.display = "block";
+        };
+        xia.onmouseout = function () {
+            xiala.style.display = "none";
+        };
+
+    }();
+    ~function () {
+        function addZero(value) {
+            return value < 10 ? "0" + value : value;
+        }
+
+        var timeDiv = document.getElementById("timeDiv");
+        var timeSpan = timeDiv.getElementsByTagName("span")[0];
+
+        function diffFn() {
+            var targetTime = new Date("2016/5/30 22:33:00");
+            var nowTime = new Date();
+            var diffTime = targetTime - nowTime;
+
+            if (diffTime <= 0) {
+                //->倒计时应该结束了,我们也需要把定时器清除掉
+                window.clearInterval(timer);
+
+                timeSpan.innerHTML = "00:00:00";
+                return;
+            }
+
+            var hour = Math.floor(diffTime / (1000 * 60 * 60));
+            diffTime = diffTime - hour * 60 * 60 * 1000;
+            var minute = Math.floor(diffTime / (1000 * 60));
+            diffTime = diffTime - minute * 60 * 1000;
+            var second = Math.floor(diffTime / 1000);
+            timeSpan.innerHTML = addZero(hour) + ":" + addZero(minute) + ":" + addZero(second);
+        }
+
+        diffFn();
+
+        var timer = window.setInterval(diffFn, 1000);
+
+    }();
+    ~function () {
+        var ban = document.getElementById("bann");
+        var bannerInn = utils.children(ban, "div")[0];
+        var oDivlist = utils.children(bannerInn, "div");
+        var oA = utils.children(ban, "a");
+        var banleft = oA[0];
+        var banright = oA[1];
+        console.log(oA);
+        var step = 0;//步长当前是哪一张图片
+
+        banright.onclick = function () {
+            if (step >= 2) {
+                step = 0;
+                utils.css(bannerInn, "left", 0)
+            }
+            step++;
+            zhufengAnimate(bannerInn, {left: -step * 1000}, 1000)
+        }
+        banleft.onclick = function () {
+            if (step <= 0) {
+                step = 2
+                utils.css(bannerInn, "left", -2000)
+            }
+            step--;
+            zhufengAnimate(bannerInn, {left: -step * 1000}, 1000)
+        }
+    }()
+</script>
 </body>
 </html>

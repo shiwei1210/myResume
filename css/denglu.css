@@ -1,0 +1,480 @@
+* {
+    color: #666;
+    font: 14px / 1.5 "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+}
+
+body, h1, p, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    border: none;
+    display: block;
+}
+
+ul, li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+input {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+dl {
+    margin: 0;
+    padding: 0;
+}
+
+dd {
+    margin: 0;
+}
+
+.header {
+    width: 100%;
+    height: 7px;
+    background: red;
+    background: -webkit-linear-gradient(top left, chartreuse, cornflowerblue, crimson);
+    background: -moz-linear-gradient(top left, chartreuse, cornflowerblue, crimson);
+    background: -ms-linear-gradient(top left, chartreuse, cornflowerblue, crimson);
+    background: -o-linear-gradient(top left, chartreuse, crimson);
+    background: linear-gradient(top left, chartreuse, cornflowerblue, crimson);
+}
+
+.main {
+    width: 100%;
+    background: url("../img/denglu_bg.png") repeat-x center;
+    height: 800px;
+
+}
+
+.main .logo {
+    position: absolute;
+    left: 40%;
+    top: 0;
+}
+
+.mian_box {
+    width: 1000px;
+    margin: auto;
+
+}
+
+.mainleft img, .mainleft input {
+    float: left;
+}
+
+.mainleft {
+    position: relative;
+    height: 50px;
+    padding-top: 26px;
+}
+
+.mainleft input {
+    background: transparent;
+    border: #eeeeee solid 1px;
+    color: white;
+    height: 28px;
+    border-radius: 5px;
+    width: 230px;
+    background: url("../img/sousuo_fangdajing.png") no-repeat 240px center;
+    margin-left: 40px;
+    padding-left: 45px;
+
+}
+.xiala {
+    clear: left;
+}
+
+.xiala a {
+    display: block;
+    width: 50px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.xiala h1 {
+    width: 50px;
+    text-align: center;
+    color: white;
+}
+
+.xiala {
+    color: white;
+    position: absolute;
+    top: 31px;
+    left: 40px;
+}
+
+.xiala a:last-child {
+    border: none;
+}
+
+.xialakuang {
+    background: white;
+    border-radius: 8px;
+    display: none;
+    margin-top: 5px;
+}
+
+.xiala a:hover {
+    background: skyblue;
+    color: white;
+}
+
+.xialakuang {
+    display: none;
+}
+
+.xix a {
+    display: block;
+    padding: 10px 35px;
+    width: 60px;
+    background: white;
+    text-align: center;
+    cursor: pointer;
+    border-bottom: #d9d9db solid 1px;
+}
+
+.xix a:first-child {
+    padding: 15px 35px;
+    text-align: center;
+}
+
+.photo {
+    position: absolute;
+    background: white;
+}
+
+.xix {
+    clear: left;
+    display: none;
+    position: absolute;
+    top: 40px;
+}
+
+.photo:hover {
+    background: white;
+    height: 40px;
+}
+
+.xix .shou {
+    background: url("../img/denglu_fang.png") no-repeat 20px 16px white;
+    border-top-right-radius: 7px;
+}
+
+.xix .shou:hover {
+    background: url("../img/denglu_fang1.png") no-repeat 20px 16px white;
+    border-top-right-radius: 7px;
+    color: #1689df;
+}
+
+.xix .fa {
+    background: url("../img/denglu_fa.png") no-repeat 20px 10px white;
+}
+
+.xix .fa:hover {
+    background: url("../img/denglu_fa1.png") no-repeat 20px 10px white;
+    color: #1689df;
+}
+
+.xix .shang {
+    background: url("../img/denglu_shang.png") no-repeat 20px 8px white;
+}
+
+.xix .shang:hover {
+    background: url("../img/denglu_shang1.png") no-repeat 20px 8px white;
+    color: #1689df;
+}
+
+.xix .xin {
+    background: url("../img/denglu_xin.png") no-repeat 20px 12px white;
+}
+
+.xix .xin:hover {
+    background: url("../img/denglu_xin1.png") no-repeat 20px 12px white;
+    color: #1689df;
+}
+
+.xix .ying {
+    background: url("../img/denglu_ying.png") no-repeat 20px 12px white;
+}
+
+.xix .ying:hover {
+    background: url("../img/denglu_ying1.png") no-repeat 20px 12px white;
+    color: #1689df;
+}
+
+.xix .she {
+    background: url("../img/denglu_she.png") no-repeat 20px 12px white;
+}
+
+.xix .she:hover {
+    background: url("../img/denglu_she1.png") no-repeat 20px 12px white;
+    color: #1689df;
+}
+
+.mainright {
+    position: absolute;
+    right: 176px;
+    top: 30px;
+}
+
+.mainright div {
+    float: left;
+}
+
+.mainright .wzbj {
+    cursor: pointer;
+    border: white solid 1px;
+    border-radius: 5px;
+    color: white;
+    padding: 4px 18px;
+    margin-right: 10px;
+    letter-spacing: 2px;
+}
+
+.mainright .gwc {
+    width: 40px;
+    height: 28px;
+    background: url("../img/denglu_gouwu.png") no-repeat center center;
+    border: white solid 1px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.mainright .kong {
+    position: absolute;
+    top: 35px;
+    right: 0px;
+    clear: left;
+    width: 300px;
+    height: 200px;
+    background: white;
+    display: none;
+    text-align: center;
+    line-height: 200px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    border: #e4e4e4 solid 1px;
+    border-right: none;
+    border-top: none;
+}
+
+.mainright .gwc:hover {
+    width: 40px;
+    height: 40px;
+    background: url("../img/denglu_gouwu1.png") no-repeat center 5px white;
+    border: white solid 1px;
+    border-radius: 5px;
+    cursor: pointer;
+    border-bottom: white solid 1px;
+}
+
+.box {
+    width: 1000px;
+    height: 650px;
+    background: #ffffff;
+    border-radius: 5px;
+    margin: auto;
+    margin-top: 50px;
+    overflow: hidden;
+}
+
+.boxleft {
+    float: left;
+    width: 460px;
+    margin-left: 40px;
+}
+
+#boox div.select {
+    display: block;
+}
+
+#boox ul li.select {
+    border-bottom: 2px solid #1689df;
+    color: #1689df;
+    font-size: 16px;
+}
+
+.boxleft h1 {
+    text-align: center;
+    line-height: 80px;
+    font-size: 22px;
+    color: black;
+}
+
+.boxright h1 {
+    text-align: center;
+    line-height: 80px;
+    font-size: 22px;
+    color: black;
+}
+
+.boxright {
+    float: right;
+    width: 450px;
+}
+
+#boox li {
+    float: left;
+    text-align: center;
+    width: 200px;
+    font-size: 16px;
+    border-bottom: 2px solid #e4e4e4;
+}
+
+#boox div {
+    clear: left;
+    display: none;
+}
+
+.input1 {
+    height: 60px;
+    padding-bottom: 20px;
+}
+
+.input1 input {
+    border: #e4e4e4 solid 1px;
+    width: 376px;
+    height: 50px;
+    margin-top: 30px;
+    border-radius: 5px;
+    padding-left: 20px;
+}
+
+.input1 input.ok {
+    border-color: green;
+}
+
+.input1 input.error {
+    border-color: red;
+}
+
+#spanEmail {
+    display: none;
+}
+
+#spanEmai2 {
+    display: none;
+}
+
+#spanEmai3 {
+    display: none;
+}
+
+#spanEmal {
+    display: none;
+}
+
+#spanEma2 {
+    display: none;
+}
+
+#spanEma3 {
+    display: none;
+}
+
+#spanE {
+    display: none;
+}
+
+#spanE1 {
+    display: none;
+}
+
+#spanEmai4 input {
+    width: 400px;
+    text-align: center;
+    cursor: pointer;
+    display: block;
+}
+
+.huoqu {
+    position: absolute;
+    right: 75px;
+    top: 39px;
+    border: #e4e4e4 solid 1px;
+    background: beige;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.zhuce {
+    width: 250px;
+    background: #1689df;
+    text-align: center;
+}
+
+.zhuce {
+    line-height: 55px;
+    color: white;
+    border-radius: 20px;
+    margin-top: 40px;
+    margin-left: 80px;
+    font-size: 18px;
+}
+
+.boxright .yiyou {
+    color: black;
+    font-size: 16px;
+}
+
+.fotto {
+    width: 100%;
+    height: 7px;
+    background: red;
+    background: -webkit-linear-gradient(top left, chartreuse, cornflowerblue, crimson);
+    background: -moz-linear-gradient(top left, chartreuse, cornflowerblue, crimson);
+    background: -ms-linear-gradient(top left, chartreuse, cornflowerblue, crimson);
+    background: -o-linear-gradient(top left, chartreuse, crimson);
+    background: linear-gradient(top left, chartreuse, cornflowerblue, crimson);
+}
+
+.fo {
+    width: 1000px;
+    overflow: hidden;
+    margin: auto;
+}
+
+.f1, .f2, .f3, .f4, .f5 {
+    float: left;
+    width: 200px;
+}
+
+.f1 {
+    margin-top: 50px;
+}
+
+.leff, .rght {
+    float: left;
+    margin-right: 20px;
+}
+
+.leff a {
+    display: block;
+    line-height: 25px;
+}
+
+.rght a {
+    display: block;
+    line-height: 25px;
+}
+.ftto{
+    width: 1000px;
+    margin: auto;
+}
+
+
+
