@@ -1,0 +1,665 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#main {
+    width: 640px;
+    height: 960px;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    margin-left: -320px;
+    top: 0;
+    /*上面设置定位是为了水平居中*/
+    transform-origin: top;
+    -webkit-transform-origin: top;
+}
+
+#main ul {
+    width: 100%;
+    height: 100%;
+}
+
+#main ul li {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+#main ul li:nth-child(1) {
+    /*1.ul下的第一个子元素 2.这个子元素标记名是li*/
+    background: #24c9a1;
+}
+
+#main ul li:nth-child(2) {
+    background: url("../image/bg2.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+#main ul li:nth-child(3) {
+    background: #a0d468;
+}
+
+#main ul li:nth-child(4) {
+    background: #3e4b5b;
+}
+
+#main ul li:nth-child(5) {
+    background: url("../image/bg.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+#main ul li:nth-child(6) {
+    background: url("../image/bg.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+#main ul li.zIndex {
+    /*用来改变层级关系的*/
+    z-index: 10;
+}
+
+.music audio {
+    display: none;
+}
+
+.a4 {
+    width: 80%;
+    height: 90%;
+    margin: auto;
+    position: relative;
+}
+
+.a4 p {
+    text-align: center;
+}
+
+.music {
+    /*display: none;*/
+    position: absolute;
+    z-index: 20;
+    top: 60px;
+    right: 30px;
+    width: 65px;
+    height: 65px;
+    background: url("../music.svg") no-repeat;
+    background-size: 100% 100%;
+}
+
+.musi {
+    -webkit-animation: musicMove 1s linear 0s infinite;
+    animation: musicMove 1s linear 0s infinite;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes musi {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes musi {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+.music audio {
+    display: none;
+}
+
+.a4 .quanquan {
+    margin-top: 15%;
+    margin-left: 18%;
+    width: 350px;
+    height: 350px;
+    background: url("../image/yuanquan.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.musicMove {
+    -webkit-animation: musicMove 2s linear 0s infinite;
+    animation: musicMove 2s linear 0s infinite;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes musicMove {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes musicMove {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+.a4 .touxiang {
+    position: absolute;
+    top: 2.5%;
+    left: 23%;
+    width: 300px;
+    height: 300px;
+    background: url("../image/touxiang.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.a4 .wenzi {
+    font-size: 28px;
+    color: white;
+    margin-top: 20px;
+    letter-spacing: 5px;
+}
+
+.a4 .geren {
+    font-size: 60px;
+    color: white;
+    margin-top: 25px;
+    letter-spacing: 13px;
+}
+
+.a4 .shugang {
+    margin-top: 20px;
+    width: 500px;
+    height: 8px;
+    background: white;
+}
+
+.a4 .qiuzhi {
+    font-size: 30px;
+    color: white;
+    margin-top: 5px;
+    font-family: "微软雅黑", "Oswald", "Helvetica Neue", "Microsoft YaHei", Helvetica, Arial, Verdana, sans-serif;
+}
+
+.a4 .fudong {
+    margin-top: 150px;
+}
+
+.a4 .fudong span {
+    font-size: 25px;
+    color: #fff;
+}
+
+.a4 .fudong span:nth-child(1) {
+    float: left;
+    margin-left: 90px;
+}
+
+.a4 .fudong span:nth-child(2) {
+    float: right;
+    margin-right: 90px;
+}
+
+.a4 .jinyibu {
+    margin-top: 220px;
+    width: 367px;
+    height: 59px;
+    margin-left: 70px;
+    background: url("../image/jinyibu.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.a4 .xiaojiantou {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    margin-left: -35px;
+    animation: 1.5s infinite arrMove;
+}
+
+@keyframes arrMove {
+    0% {
+        transform: translateY(80px);
+        opacity: 0
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes arrMove {
+    0% {
+        transform: translateY(80px);
+        opacity: 0
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1
+    }
+}
+
+.a1 {
+    width: 100%;
+    height: 90%;
+    margin: auto;
+    position: relative;
+}
+
+.a1 p {
+    text-align: center;
+}
+
+.a1 .mulu {
+    margin-top: 18px;
+    width: 640px;
+    height: 204px;
+    background: url("../image/gongzuojingyan.png") no-repeat;
+}
+
+.a1 .wenzijieshao {
+    width: 90%;
+    margin: auto;
+    text-align: left;
+    color: white;
+    font-size: 40px;
+    margin-top: 40px;
+    line-height: 160px;
+}
+
+.a1 .wenzi1 {
+    width: 90%;
+    margin: auto;
+    text-align: left;
+    color: white;
+    font-size: 30px;
+    line-height: 80px;
+}
+
+.a1 .xiaojiantou {
+    position: absolute;
+    bottom: 10px;
+    left: 48%;
+    animation: 1.5s infinite arrMove;
+}
+
+@keyframes arrMove {
+    0% {
+        transform: translateY(80px);
+        opacity: 0
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes arrMove {
+    0% {
+        transform: translateY(80px);
+        opacity: 0
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1
+    }
+}
+
+.a2 {
+    width: 80%;
+    height: 90%;
+    position: relative;
+}
+
+.a5 {
+    width: 100%;
+    height: 90%;
+    margin: auto;
+    position: relative;
+}
+
+.a5 .awu {
+    margin-top: 18px;
+    width: 640px;
+    height: 204px;
+    background: url("../image/xingquaihao.png") no-repeat;
+}
+
+.a5 .p1 {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    margin-left: -80px;
+    width: 146px;
+    height: 146px;
+    background: url("../image/t1.png") no-repeat;
+}
+
+.a5 .p2 {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    width: 146px;
+    height: 146px;
+    background: url("../image/t2.png") no-repeat;
+}
+
+.a5 .p3 {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    margin-left: -80px;
+    width: 146px;
+    height: 146px;
+    background: url("../image/t3.png") no-repeat;
+}
+
+.a5 .p4 {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    width: 146px;
+    height: 146px;
+    background: url("../image/t4.png") no-repeat;
+}
+
+.a5 .p5 {
+    position: absolute;
+    top: 50%;
+    left: 38%;
+    width: 146px;
+    height: 146px;
+    background: url("../image/t5.png") no-repeat;
+}
+
+.a5 .xiaojiantou {
+    position: absolute;
+    bottom: 10px;
+    left: 45%;
+    animation: 1.5s infinite arrMove;
+}
+
+@keyframes arrMove {
+    0% {
+        transform: translateY(80px);
+        opacity: 0
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes arrMove {
+    0% {
+        transform: translateY(80px);
+        opacity: 0
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1
+    }
+}
+
+.a2 p {
+    text-align: center;
+}
+
+.a2 .xinxi {
+    font-size: 40px;
+    color: white;
+    padding-top: 20px;
+    margin-left: 20%;
+}
+
+.a2 .about {
+    font-size: 40px;
+    color: white;
+    margin-left: 20%;
+}
+
+.a2 .guanyuwo {
+    width: 640px;
+    height: 204px;
+    background: url("../image/guanyuwo.png") no-repeat;
+}
+
+.a2 .xingm {
+    position: absolute;
+    top: 32%;
+    left: 32%;
+    width: 303px;
+    height: 76px;
+    background: url("../image/xinmi.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+
+.a2 .seban {
+    position: absolute;
+    top: 25%;
+    left: 13%;
+    width: 504px;
+    height: 624px;
+    background: url("../image/seban.png") no-repeat;
+}
+
+.a2 .jisuanji {
+    position: absolute;
+    top: 45%;
+    left: 23%;
+    width: 399px;
+    height: 81px;
+    background: url("../image/jisuanji.png") no-repeat;
+}
+
+.a2 .xuexiao {
+    position: absolute;
+    top: 55%;
+    left: 23%;
+    width: 399px;
+    height: 81px;
+    background: url("../image/xuexiao.png") no-repeat;
+}
+
+.a2 .xueli {
+    position: absolute;
+    top: 65%;
+    left: 23%;
+    width: 399px;
+    height: 81px;
+    background: url("../image/xueli.png") no-repeat;
+}
+
+.a2 .xiaojiantou {
+    position: absolute;
+    bottom: 10px;
+    left: 55%;
+    animation: 1.5s infinite arrMove;
+}
+
+@keyframes arrMove {
+    0% {
+        transform: translateY(80px);
+        opacity: 0
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes arrMove {
+    0% {
+        transform: translateY(80px);
+        opacity: 0
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1
+    }
+}
+
+.a3 {
+    width: 90%;
+    height: 90%;
+    position: relative;
+}
+
+.a3 p {
+    text-align: center;
+}
+
+.a3 .qiaomen {
+    margin-top: 50px;
+    margin-left: 24%;
+    width: 366px;
+    height: 395px;
+    background: url("../image/qiaomen.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.a3 .xiaoxing {
+    position: absolute;
+    top: 0;
+    left: 12%;
+    width: 192px;
+    height: 240px;
+    background: url("../image/xiaoxin.png") no-repeat;
+}
+
+.a3 .quanbu {
+    margin-left: 10%;
+    margin-top: 30px;
+    overflow: hidden;
+}
+
+.a3 .quanbu a {
+    display: block;
+    float: left;
+    margin-left: 30px;
+}
+
+.a3 .qu {
+    margin-left: 10%;
+    margin-top: 40px;
+    overflow: hidden;
+}
+
+.a3 .qu a {
+    display: block;
+    float: left;
+    margin-left: 30px;
+}
+
+.a3 .xiaojiantou {
+    position: absolute;
+    bottom: 30px;
+    left: 55%;
+    animation: 1.5s infinite arrMove;
+}
+
+@keyframes arrMove {
+    0% {
+        transform: translateY(80px);
+        opacity: 0
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes arrMove {
+    0% {
+        transform: translateY(80px);
+        opacity: 0
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1
+    }
+}
+
+.a6 {
+    width: 80%;
+    height: 90%;
+    margin: auto;
+}
+
+.a6 p {
+    text-align: center;
+}
+
+.a6 .gerenjianli {
+    font-size: 50px;
+    color: white;
+    margin-top: 40%;
+}
+
+.a6 .yitiaogang {
+    margin: auto;
+    width: 500px;
+    margin-top: 60px;
+    height: 5px;
+    background: white;
+}
+
+.a6 .erwei {
+    margin-top: 40px;
+    margin-left: 60px;
+    width: 400px;
+    height: 400px;
+    background: url("../image/1463546091.png") no-repeat;
+    background-size: 100% 100%;
+}
+.a6 .xiaojiantou {
+    position: absolute;
+    bottom: 80px;
+    left: 45%;
+    animation: 1.5s infinite arrMove;
+}
+
+@keyframes arrMove {
+    0% {
+        transform: translateY(60px);
+        opacity: 0
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes arrMove {
+    0% {
+        transform: translateY(60px);
+        opacity: 0
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1
+    }
+}
